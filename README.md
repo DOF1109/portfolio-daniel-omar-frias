@@ -1,8 +1,15 @@
-# React + Vite
+Paso a paso:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1 - Se instala MUI
+npm install @mui/material @emotion/react @emotion/styled
 
-Currently, two official plugins are available:
+2 - Se instala MUI Icons
+npm install @mui/icons-material
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3 - Se instala React Router
+npm install react-router-dom localforage match-sorter sort-by
+
+4 - Se instala MUI Lab
+npm install @mui/lab
+
+5 - Se limpia el proyecto
