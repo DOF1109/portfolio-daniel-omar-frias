@@ -1,10 +1,14 @@
 import { Typography } from "@mui/material";
+import "../../../styles/variables.css";
+import "./Profile.css";
 
 const Profile = () => {
   return (
     <div className="profile container-shadow">
       <div className="profile__name">
-        <Typography className="name">Daniel Omar Frias</Typography>
+        <Typography variant="h6" fontWeight="bold">
+          DANIEL OMAR FRIAS
+        </Typography>
         <Typography className="title">Full Stack Web Developer</Typography>
       </div>
       <figure className="profile__img">

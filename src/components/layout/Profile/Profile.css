@@ -1,0 +1,11 @@
+.profile {
+  background: var(--light-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+  /* display: inline-block; */
+}
+
+.profile__name {
+  /* line-height: 18px; */
+  padding: 1.25rem;
+}
