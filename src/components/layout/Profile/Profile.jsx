@@ -6,13 +6,18 @@ const Profile = () => {
   return (
     <div className="profile container-shadow">
       <div className="profile__name">
-        <Typography variant="h6" fontWeight="bold">
+        <Typography variant="h5" component="h1" fontWeight="bold">
           DANIEL OMAR FRIAS
         </Typography>
-        <Typography className="title">Full Stack Web Developer</Typography>
+        <Typography variant="body1" component="h2" className="title">
+          Full Stack Web Developer
+        </Typography>
       </div>
       <figure className="profile__img">
-        <img src="" alt="" />
+        <img
+          src="../../../assets/images/daniel-omar-frias-foto.jpg"
+          alt="Picture Daniel Omar Frias"
+        />
       </figure>
       <div className="profile__information">
         Insert Timeline

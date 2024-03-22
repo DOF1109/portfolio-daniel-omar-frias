@@ -9,3 +9,7 @@
   /* line-height: 18px; */
   padding: 1.25rem;
 }
+
+.profile__name .title {
+  color: #656565;
+}
