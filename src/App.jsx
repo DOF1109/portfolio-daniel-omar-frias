@@ -11,21 +11,26 @@ function App() {
   return (
     <Container>
       <Grid container>
-        <Grid item xs={12} sm={12} md={4} lg={3}>
+
+        <Grid item xs={12} md={4} lg={3}>
           <Profile />
         </Grid>
-        <Grid xs item style={{ background: "tomato" }}>
+
+        <Grid item xs style={{ background: "tomato" }}>
           <BrowserRouter>
             <Routes>
+
               <Route element={<Layout />}>
                 <Route path="/" element={<Resume />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/contact" element={<Contact />} />
               </Route>
               <Route path="*" element={<h1>404 Not Found</h1>} />
+              
             </Routes>
           </BrowserRouter>
         </Grid>
+
       </Grid>
     </Container>
   );
