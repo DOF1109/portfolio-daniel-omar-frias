@@ -4,8 +4,7 @@ import "./Profile.css";
 
 const Profile = () => {
   return (
-    <Box bgcolor="primary.main" className="container-shadow">
-
+    <Box bgcolor="secondary.main" className="container-shadow">
       <div className="profile__name">
         <Typography variant="h5" component="h1" fontWeight="bold">
           DANIEL OMAR FRIAS
@@ -27,7 +26,6 @@ const Profile = () => {
         <br />
         <button>My button</button>
       </div>
-
     </Box>
   );
 };
