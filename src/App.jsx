@@ -1,6 +1,6 @@
 import { Container, Grid, ThemeProvider } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import theme from "./styles/theme";
+import darkTheme from "./styles/themeConfig";
 import Profile from "./components/layout/Profile/Profile";
 import Portfolio from "./components/pages/Portfolio/Portfolio";
 import Resume from "./components/pages/Resume/Resume";
@@ -9,7 +9,7 @@ import Contact from "./components/pages/Contact/Contact";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
       <Container>
         <Grid container>
           <Grid item xs={12} md={4} lg={3}>
