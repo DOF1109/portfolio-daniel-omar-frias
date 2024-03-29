@@ -1,20 +1,18 @@
 import { Box, Typography } from "@mui/material";
-import "../../../styles/variables.css";
-import "./Profile.css";
 
 const Profile = () => {
   return (
-    <Box bgcolor="primary.main" className="container-shadow">
-      <div className="profile__name">
+    <Box bgcolor="background.paper">
+      <Box>
         <Typography variant="h5" component="h1" fontWeight="bold">
           DANIEL OMAR FRIAS
         </Typography>
-        <Typography variant="body1" component="h2" className="title">
+        <Typography variant="body1" component="h2">
           Full Stack Web Developer
         </Typography>
-      </div>
+      </Box>
 
-      <figure className="profile__img">
+      {/* <figure className="profile__img">
         <img
           src="../../../assets/images/daniel-omar-frias-foto.jpg"
           alt="Picture Daniel Omar Frias"
@@ -25,7 +23,7 @@ const Profile = () => {
         Insert Timeline
         <br />
         <button>My button</button>
-      </div>
+      </div> */}
     </Box>
   );
 };

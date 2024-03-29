@@ -1,4 +1,4 @@
-import { Container, Grid, ThemeProvider } from "@mui/material";
+import { Container, CssBaseline, Grid, ThemeProvider } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import darkTheme from "./styles/themeConfig";
 import Profile from "./components/layout/Profile/Profile";
@@ -10,13 +10,14 @@ import Contact from "./components/pages/Contact/Contact";
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
       <Container>
         <Grid container>
           <Grid item xs={12} md={4} lg={3}>
             <Profile />
           </Grid>
 
-          <Grid item xs style={{ background: "tomato" }}>
+          <Grid item xs>
             <BrowserRouter>
               <Routes>
                 <Route element={<Layout />}>
