@@ -1,29 +1,42 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import ProfilePhoto from "../../../assets/images/daniel-omar-frias-foto.jpg";
 
 const Profile = () => {
   return (
-    <Box bgcolor="background.paper">
-      <Box>
-        <Typography variant="h5" component="h1" fontWeight="bold">
+    <Box
+      component="aside"
+      bgcolor="background.paper"
+      borderRadius={2}
+      boxShadow={5}
+    >
+      <Box p={2}>
+        <Typography component="h1" variant="h6" fontWeight="bold">
           DANIEL OMAR FRIAS
         </Typography>
-        <Typography variant="body1" component="h2">
+        <Typography component="h2" variant="body1">
           Full Stack Web Developer
         </Typography>
       </Box>
 
-      {/* <figure className="profile__img">
-        <img
-          src="../../../assets/images/daniel-omar-frias-foto.jpg"
-          alt="Picture Daniel Omar Frias"
+      <Box my={3} display="flex" justifyContent="center">
+        <Box
+          component="img"
+          src={ProfilePhoto}
+          alt="Daniel Omar Frias's photo"
+          sx={{
+            border: 3,
+            borderColor: "primary.main",
+            borderRadius: "50%",
+            maxWidth: { xs: 350, md: 250 },
+            width: 200,
+          }}
         />
-      </figure>
+      </Box>
 
-      <div className="profile__information">
+      <Box>
         Insert Timeline
-        <br />
-        <button>My button</button>
-      </div> */}
+        <Button variant="contained">My button</Button>
+      </Box>
     </Box>
   );
 };
