@@ -12,7 +12,13 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Container>
-        <Grid container minHeight="100vh" alignContent="center" spacing={3}>
+        <Grid
+          container
+          alignContent="center"
+          minHeight="100vh"
+          py={3}
+          spacing={3}
+        >
           <Grid item xs={12} md={4} lg={3}>
             <Profile />
           </Grid>

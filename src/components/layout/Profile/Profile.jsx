@@ -1,5 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import ProfilePhoto from "../../../assets/images/daniel-omar-frias-foto.jpg";
+import CustomTimeline from "../../common/CustomTimeline/CustomTimeline";
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 
 const Profile = () => {
   return (
@@ -9,7 +11,7 @@ const Profile = () => {
       borderRadius={2}
       boxShadow={5}
     >
-      <Box p={2}>
+      <Box p={3}>
         <Typography component="h1" variant="h6" fontWeight="bold">
           DANIEL OMAR FRIAS
         </Typography>
@@ -34,7 +36,7 @@ const Profile = () => {
       </Box>
 
       <Box>
-        Insert Timeline
+        <CustomTimeline icon={<LaptopMacIcon />} />
         <Button variant="contained">My button</Button>
       </Box>
     </Box>
