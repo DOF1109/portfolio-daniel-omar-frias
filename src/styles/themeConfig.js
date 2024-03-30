@@ -17,6 +17,9 @@ const darkTheme = createTheme({
       primary: "#f0fdfa",
     },
   },
+  typography: {
+    fontFamily: "Ubuntu, sans-serif",
+  },
 });
 
 export default darkTheme;
