@@ -8,7 +8,7 @@ import {
   timelineItemClasses,
 } from "@mui/lab";
 import { Typography } from "@mui/material";
-import CustomTimelineItem from "../CustomTimelineItem/CustomTimelineItem";
+import ProfileTimelineItem from "./ProfileTimelineItem";
 
 const CustomTimeline = ({ title, icon }) => {
   return (
@@ -32,11 +32,11 @@ const CustomTimeline = ({ title, icon }) => {
       </TimelineItem>
 
       {/* Items */}
-      <CustomTimelineItem content="Frontend" hasConnector={true} />
+      <ProfileTimelineItem content="Frontend" hasConnector={true} />
 
-      <CustomTimelineItem content="MUI" hasConnector={true} />
+      <ProfileTimelineItem content="MUI" hasConnector={true} />
 
-      <CustomTimelineItem content="React" hasConnector={false} />
+      <ProfileTimelineItem content="React" hasConnector={false} />
     </Timeline>
   );
 };

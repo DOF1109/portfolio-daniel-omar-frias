@@ -1,11 +1,11 @@
 import { Container, CssBaseline, Grid, ThemeProvider } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import darkTheme from "./styles/themeConfig";
-import Profile from "./components/layout/Profile/Profile";
-import Portfolio from "./components/pages/Portfolio/Portfolio";
-import Resume from "./components/pages/Resume/Resume";
+import Profile from "./components/layout/Profile";
+import Portfolio from "./components/pages/Portfolio";
+import Resume from "./components/pages/Resume";
 import Layout from "./components/layout/Layout";
-import Contact from "./components/pages/Contact/Contact";
+import Contact from "./components/pages/Contact";
 
 function App() {
   return (

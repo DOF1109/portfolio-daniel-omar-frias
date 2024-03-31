@@ -6,7 +6,7 @@ import {
   TimelineSeparator,
 } from "@mui/lab";
 
-const CustomTimelineItem = ({ content, hasConnector }) => {
+const ProfileTimelineItem = ({ content, hasConnector }) => {
   return (
     <TimelineItem sx={{ paddingLeft: 1.5 }}>
       <TimelineSeparator>
@@ -18,4 +18,4 @@ const CustomTimelineItem = ({ content, hasConnector }) => {
   );
 };
 
-export default CustomTimelineItem;
+export default ProfileTimelineItem;
