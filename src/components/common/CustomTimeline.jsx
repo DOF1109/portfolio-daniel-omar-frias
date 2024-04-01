@@ -8,16 +8,15 @@ import {
   timelineItemClasses,
 } from "@mui/lab";
 import { Typography } from "@mui/material";
-import ProfileTimelineItem from "./ProfileTimelineItem";
 
-const CustomTimeline = ({ title, icon }) => {
+const CustomTimeline = ({ title, icon, children }) => {
   return (
     <Timeline
       sx={{
         [`& .${timelineItemClasses.root}:before`]: {
           display: "none",
         },
-        px: 3,
+        px: 2,
       }}
     >
       {/* Header */}
@@ -32,11 +31,7 @@ const CustomTimeline = ({ title, icon }) => {
       </TimelineItem>
 
       {/* Items */}
-      <ProfileTimelineItem content="Frontend" hasConnector={true} />
-
-      <ProfileTimelineItem content="MUI" hasConnector={true} />
-
-      <ProfileTimelineItem content="React" hasConnector={false} />
+      {children}
     </Timeline>
   );
 };

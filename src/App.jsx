@@ -14,16 +14,16 @@ function App() {
       <Container>
         <Grid
           container
-          alignContent="center"
+          justifyContent="center"
           minHeight="100vh"
           py={3}
           spacing={3}
         >
-          <Grid item xs={12} md={4} lg={3}>
+          <Grid item xs="auto">
             <Profile />
           </Grid>
 
-          <Grid item xs>
+          <Grid item xs={10} md={8}>
             <BrowserRouter>
               <Routes>
                 <Route element={<Layout />}>

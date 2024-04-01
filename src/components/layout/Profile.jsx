@@ -1,18 +1,26 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ProfilePhoto from "../../assets/images/daniel-omar-frias-foto.jpg";
 import CustomTimeline from "../common/CustomTimeline";
 import PersonIcon from "@mui/icons-material/Person";
 import resumeData from "../../utils/resumeData";
+import ProfileTimelineItem from "../common/ProfileTimelineItem";
+import ButtonIcon from "../common/ButtonIcon";
+import DownloadIcon from "@mui/icons-material/Download";
 
 const Profile = () => {
+  const downloadCV = () => {
+    console.log("Descargar CV");
+  };
+
   return (
     <Box
       component="aside"
       bgcolor="background.paper"
       borderRadius={2}
       boxShadow={5}
+      p={3}
     >
-      <Box p={3}>
+      <Box>
         <Typography component="h1" variant="h6" fontWeight="bold">
           {resumeData.name}
         </Typography>
@@ -21,7 +29,7 @@ const Profile = () => {
         </Typography>
       </Box>
 
-      <Box my={3} display="flex" justifyContent="center">
+      <Box mt={4} display="flex" justifyContent="center">
         <Box
           component="img"
           src={ProfilePhoto}
@@ -36,9 +44,37 @@ const Profile = () => {
         />
       </Box>
 
-      <Box>
-        <CustomTimeline icon={<PersonIcon />} />
-        <Button variant="contained">My button</Button>
+      <Box display="flex" flexDirection="column" alignItems="center">
+        <CustomTimeline icon={<PersonIcon />}>
+          <ProfileTimelineItem
+            title="Email"
+            text={resumeData.email}
+            hasConnector={true}
+          />
+          <ProfileTimelineItem
+            title="Dirección"
+            text={resumeData.address}
+            hasConnector={true}
+          />
+          <ProfileTimelineItem
+            title="LinkedIn"
+            text={resumeData.socials.linkedin.text}
+            url={resumeData.socials.linkedin.url}
+            hasConnector={true}
+          />
+          <ProfileTimelineItem
+            title="GitHub"
+            text={resumeData.socials.github.text}
+            url={resumeData.socials.github.url}
+            hasConnector={false}
+          />
+        </CustomTimeline>
+
+        <ButtonIcon
+          text="Descargar CV"
+          icon={<DownloadIcon />}
+          handleClick={downloadCV}
+        />
       </Box>
     </Box>
   );
