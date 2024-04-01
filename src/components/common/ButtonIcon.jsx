@@ -1,6 +1,6 @@
-import { Button } from "@mui/material";
+import { Button, Link } from "@mui/material";
 
-const ButtonIcon = ({ text, icon, handleClick }) => {
+const ButtonIcon = ({ text, icon, link }) => {
   return (
     <Button
       variant="contained"
@@ -9,9 +9,10 @@ const ButtonIcon = ({ text, icon, handleClick }) => {
         borderRadius: "50px",
         textTransform: "none",
       }}
-      onClick={handleClick}
     >
-      {text}
+      <Link href={link} underline="none" color="inherit" target="_blank">
+        {text}
+      </Link>
     </Button>
   );
 };

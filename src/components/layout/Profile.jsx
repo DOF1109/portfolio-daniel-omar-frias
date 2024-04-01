@@ -6,6 +6,7 @@ import resumeData from "../../utils/resumeData";
 import ProfileTimelineItem from "../common/ProfileTimelineItem";
 import ButtonIcon from "../common/ButtonIcon";
 import DownloadIcon from "@mui/icons-material/Download";
+import cvDanielOmarFrias from "../../assets/pdf/CV - Daniel Omar Frias.pdf";
 
 const Profile = () => {
   const downloadCV = () => {
@@ -73,7 +74,7 @@ const Profile = () => {
         <ButtonIcon
           text="Descargar CV"
           icon={<DownloadIcon />}
-          handleClick={downloadCV}
+          link={cvDanielOmarFrias}
         />
       </Box>
     </Box>
