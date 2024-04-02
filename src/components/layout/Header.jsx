@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
+import { Link } from "react-router-dom";
 
 const pages = ["Historial", "Portafolio", "Contacto"];
 
@@ -31,7 +32,9 @@ const Header = () => {
           size="large"
           sx={{ backgroundColor: "primary.main" }}
         >
-          <HomeIcon />
+          <Link className="clear-link" to="/">
+            <HomeIcon />
+          </Link>
         </IconButton>
 
         {/* ------------------XS------------------- */}
@@ -74,15 +77,30 @@ const Header = () => {
 
         {/* ------------------MD------------------- */}
         <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          {pages.map((page) => (
-            <Button
-              key={page}
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
-            >
-              {page}
-            </Button>
-          ))}
+          <Button
+            onClick={handleCloseNavMenu}
+            sx={{ color: "text.primary", display: "block" }}
+          >
+            <Link className="clear-link" to="/resume">
+              Historial
+            </Link>
+          </Button>
+          <Button
+            onClick={handleCloseNavMenu}
+            sx={{ color: "text.primary", display: "block" }}
+          >
+            <Link className="clear-link" to="/portfolio">
+              Portafolio
+            </Link>
+          </Button>
+          <Button
+            onClick={handleCloseNavMenu}
+            sx={{ color: "text.primary", display: "block" }}
+          >
+            <Link className="clear-link" to="/contact">
+              Contacto
+            </Link>
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>
