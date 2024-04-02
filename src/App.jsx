@@ -6,6 +6,7 @@ import Portfolio from "./components/pages/Portfolio";
 import Resume from "./components/pages/Resume";
 import Layout from "./components/layout/Layout";
 import Contact from "./components/pages/Contact";
+import About from "./components/pages/About";
 
 function App() {
   return (
@@ -23,11 +24,12 @@ function App() {
             <Profile />
           </Grid>
 
-          <Grid item xs={10} md={8}>
+          <Grid item xs="auto">
             <BrowserRouter>
               <Routes>
                 <Route element={<Layout />}>
-                  <Route path="/" element={<Resume />} />
+                  <Route path="/" element={<About />} />
+                  <Route path="/resume" element={<Resume />} />
                   <Route path="/portfolio" element={<Portfolio />} />
                   <Route path="/contact" element={<Contact />} />
                 </Route>
