@@ -31,7 +31,7 @@ const Header = () => {
     <AppBar position="static" sx={{ borderRadius: 2 }}>
       <Toolbar>
 
-        {/* ------------------XS------------------- */}
+        {/* ------------------ XS ------------------ */}
         <Box sx={{ flexGrow: 1, display: { xs: "flex", sm:"none", md: "none" }, justifyContent: "space-between" }}>
           <Box>
             <Link to="/">
@@ -73,52 +73,65 @@ const Header = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseNavMenu}>
+                  <Link className="clear-link" to="/resume">Historial</Link>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                  <Link className="clear-link" to="/portfolio">Portafolio</Link>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                  <Link className="clear-link" to="/contact">Contacto</Link>
+              </MenuItem>
             </Menu>
           </Box>
         </Box>
 
-        {/* ------------------SM------------------- */}
-        <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }}>
-          <Link className="clear-link" to="/">
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ color: "text.primary" }}
-            >
-              Inicio
-            </Button>
-          </Link>
-          <Link className="clear-link" to="/resume">
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ color: "text.primary" }}
-            >
-              Historial
-            </Button>
-          </Link>
-          <Link className="clear-link" to="/portfolio">
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ color: "text.primary" }}
-            >
-              Portafolio
-            </Button>
-          </Link>
-          <Link className="clear-link" to="/contact">
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ color: "text.primary" }}
-            >
-              Contacto
-            </Button>
-          </Link>
+        {/* ------------------ SM ------------------ */}
+        <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" }, justifyContent: "space-between" }}>
+          <Box>
+            <Link className="clear-link" to="/">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ color: "text.primary" }}
+              >
+                Inicio
+              </Button>
+            </Link>
+            <Link className="clear-link" to="/resume">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ color: "text.primary" }}
+              >
+                Historial
+              </Button>
+            </Link>
+            <Link className="clear-link" to="/portfolio">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ color: "text.primary" }}
+              >
+                Portafolio
+              </Button>
+            </Link>
+            <Link className="clear-link" to="/contact">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ color: "text.primary" }}
+              >
+                Contacto
+              </Button>
+            </Link>
+          </Box>
+          <Box sx={{display:{md:"none"}}}>
+            <ButtonIcon
+              text="Contrátame"
+              icon={<EmailIcon />}
+              link={`mailto:${resumeData.email}?subject=Interesado/a en contratarte`}
+            />
+          </Box>
         </Box>
 
-        {/* ------------------MD------------------- */}
+        {/* ------------------ MD ------------------ */}
         <Box sx={{ flexGrow: 1, display: { xs: "none", sm:"none", md: "flex" }, justifyContent:"end" }}>
           <Link to={resumeData.socials.linkedin.url} target="_blank">
             <IconButton aria-label="LinkedIn">
