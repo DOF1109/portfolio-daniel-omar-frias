@@ -12,7 +12,6 @@ import HomeIcon from "@mui/icons-material/Home";
 import { Link } from "react-router-dom";
 import resumeData from "../../utils/resumeData";
 import ButtonIcon from "../common/ButtonIcon";
-import SendIcon from "@mui/icons-material/Send";
 import EmailIcon from '@mui/icons-material/Email';
 
 const pages = ["Historial", "Portafolio", "Contacto"];
@@ -31,100 +30,111 @@ const Header = () => {
   return (
     <AppBar position="static" sx={{ borderRadius: 2 }}>
       <Toolbar>
-        <Link to="/">
-          <IconButton
-            aria-label="Inicio"
-            size="large"
-            sx={{ backgroundColor: "primary.main" }}
-          >
-            <HomeIcon />
-          </IconButton>
-        </Link>
 
         {/* ------------------XS------------------- */}
-        <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-          <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleOpenNavMenu}
-            color="inherit"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
-            sx={{
-              display: { xs: "block", md: "none" },
-            }}
-          >
-            {pages.map((page) => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">{page}</Typography>
-              </MenuItem>
-            ))}
-          </Menu>
+        <Box sx={{ flexGrow: 1, display: { xs: "flex", sm:"none", md: "none" }, justifyContent: "space-between" }}>
+          <Box>
+            <Link to="/">
+              <IconButton
+                aria-label="Inicio"
+                size="large"
+                sx={{ backgroundColor: "primary.main" }}
+              >
+                <HomeIcon />
+              </IconButton>
+            </Link>
+          </Box>
+          <Box>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+        </Box>
+
+        {/* ------------------SM------------------- */}
+        <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }}>
+          <Link className="clear-link" to="/">
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ color: "text.primary" }}
+            >
+              Inicio
+            </Button>
+          </Link>
+          <Link className="clear-link" to="/resume">
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ color: "text.primary" }}
+            >
+              Historial
+            </Button>
+          </Link>
+          <Link className="clear-link" to="/portfolio">
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ color: "text.primary" }}
+            >
+              Portafolio
+            </Button>
+          </Link>
+          <Link className="clear-link" to="/contact">
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ color: "text.primary" }}
+            >
+              Contacto
+            </Button>
+          </Link>
         </Box>
 
         {/* ------------------MD------------------- */}
-        <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          <Box alignContent="center">
-            <Link className="clear-link" to="/resume">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ color: "text.primary" }}
-              >
-                Historial
-              </Button>
-            </Link>
-            <Link className="clear-link" to="/portfolio">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ color: "text.primary" }}
-              >
-                Portafolio
-              </Button>
-            </Link>
-            <Link className="clear-link" to="/contact">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ color: "text.primary" }}
-              >
-                Contacto
-              </Button>
-            </Link>
-          </Box>
-
-          <Box>
-            <Link to={resumeData.socials.linkedin.url} target="_blank">
-              <IconButton aria-label="LinkedIn">
-                <resumeData.socials.linkedin.icon />
-              </IconButton>
-            </Link>
-            <Link to={resumeData.socials.github.url} target="_blank">
-              <IconButton aria-label="GitHub">
-                <resumeData.socials.github.icon fontSize="small" />
-              </IconButton>
-            </Link>
-            <ButtonIcon
-              text="Contrátame"
-              icon={<EmailIcon />}
-              link={`mailto:${resumeData.email}?subject=Interesado/a en contratarte`}
-            />
-          </Box>
+        <Box sx={{ flexGrow: 1, display: { xs: "none", sm:"none", md: "flex" }, justifyContent:"end" }}>
+          <Link to={resumeData.socials.linkedin.url} target="_blank">
+            <IconButton aria-label="LinkedIn">
+              <resumeData.socials.linkedin.icon />
+            </IconButton>
+          </Link>
+          <Link to={resumeData.socials.github.url} target="_blank">
+            <IconButton aria-label="GitHub">
+              <resumeData.socials.github.icon fontSize="small" />
+            </IconButton>
+          </Link>
+          <ButtonIcon
+            text="Contrátame"
+            icon={<EmailIcon />}
+            link={`mailto:${resumeData.email}?subject=Interesado/a en contratarte`}
+          />
         </Box>
       </Toolbar>
     </AppBar>
