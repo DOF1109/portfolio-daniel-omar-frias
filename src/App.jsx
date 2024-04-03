@@ -20,11 +20,11 @@ function App() {
           py={3}
           spacing={3}
         >
-          <Grid item xs="auto">
+          <Grid item xs={12} sm={8} md={4}>
             <Profile />
           </Grid>
 
-          <Grid item xs="auto">
+          <Grid item xs={12} sm={12} md={8}>
             <BrowserRouter>
               <Routes>
                 <Route element={<Layout />}>
