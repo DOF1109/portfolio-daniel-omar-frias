@@ -1,23 +1,30 @@
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
-import { Link } from "react-router-dom";
+import EmailIcon from "@mui/icons-material/Email";
 import resumeData from "../../utils/resumeData";
 import ButtonIcon from "../common/ButtonIcon";
-import EmailIcon from '@mui/icons-material/Email';
-
-const pages = ["Historial", "Portafolio", "Contacto"];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const location = useLocation();
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  }, []);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -30,9 +37,14 @@ const Header = () => {
   return (
     <AppBar position="static" sx={{ borderRadius: 2 }}>
       <Toolbar>
-
         {/* ------------------ XS ------------------ */}
-        <Box sx={{ flexGrow: 1, display: { xs: "flex", sm:"none", md: "none" }, justifyContent: "space-between" }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: { xs: "flex", sm: "none", md: "none" },
+            justifyContent: "space-between",
+          }}
+        >
           <Box>
             <Link to="/">
               <IconButton
@@ -74,25 +86,39 @@ const Header = () => {
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
-                  <Link className="clear-link" to="/resume">Historial</Link>
+                <Link className="clear-link" to="/resume">
+                  Historial
+                </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                  <Link className="clear-link" to="/portfolio">Portafolio</Link>
+                <Link className="clear-link" to="/portfolio">
+                  Portafolio
+                </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                  <Link className="clear-link" to="/contact">Contacto</Link>
+                <Link className="clear-link" to="/contact">
+                  Contacto
+                </Link>
               </MenuItem>
             </Menu>
           </Box>
         </Box>
 
         {/* ------------------ SM ------------------ */}
-        <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" }, justifyContent: "space-between" }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: { xs: "none", sm: "flex" },
+            justifyContent: "space-between",
+          }}
+        >
           <Box>
             <Link className="clear-link" to="/">
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ color: "text.primary" }}
+                sx={{
+                  color: location.pathname === "/" ? "primary" : "text.primary",
+                }}
               >
                 Inicio
               </Button>
@@ -100,7 +126,12 @@ const Header = () => {
             <Link className="clear-link" to="/resume">
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ color: "text.primary" }}
+                sx={{
+                  color:
+                    location.pathname === "/resume"
+                      ? "primary"
+                      : "text.primary",
+                }}
               >
                 Historial
               </Button>
@@ -108,7 +139,12 @@ const Header = () => {
             <Link className="clear-link" to="/portfolio">
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ color: "text.primary" }}
+                sx={{
+                  color:
+                    location.pathname === "/portfolio"
+                      ? "primary"
+                      : "text.primary",
+                }}
               >
                 Portafolio
               </Button>
@@ -116,39 +152,40 @@ const Header = () => {
             <Link className="clear-link" to="/contact">
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ color: "text.primary" }}
+                sx={{
+                  color:
+                    location.pathname === "/contact"
+                      ? "primary"
+                      : "text.primary",
+                }}
               >
                 Contacto
               </Button>
             </Link>
           </Box>
-          <Box sx={{display:{md:"none"}}}>
-            <ButtonIcon
-              text="Contrátame"
-              icon={<EmailIcon />}
-              link={`mailto:${resumeData.email}?subject=Interesado/a en contratarte`}
-            />
-          </Box>
         </Box>
 
-        {/* ------------------ MD ------------------ */}
-        <Box sx={{ flexGrow: 1, display: { xs: "none", sm:"none", md: "flex" }, justifyContent:"end" }}>
-          <Link to={resumeData.socials.linkedin.url} target="_blank">
-            <IconButton aria-label="LinkedIn">
-              <resumeData.socials.linkedin.icon />
-            </IconButton>
-          </Link>
-          <Link to={resumeData.socials.github.url} target="_blank">
-            <IconButton aria-label="GitHub">
-              <resumeData.socials.github.icon fontSize="small" />
-            </IconButton>
-          </Link>
+        {((windowWidth > 700 && windowWidth < 900) || windowWidth > 1000) && (
+          <>
+            <Link to={resumeData.socials.linkedin.url} target="_blank">
+              <IconButton aria-label="LinkedIn">
+                <resumeData.socials.linkedin.icon />
+              </IconButton>
+            </Link>
+            <Link to={resumeData.socials.github.url} target="_blank">
+              <IconButton aria-label="GitHub">
+                <resumeData.socials.github.icon />
+              </IconButton>
+            </Link>
+          </>
+        )}
+        {windowWidth >= 600 && (
           <ButtonIcon
             text="Contrátame"
             icon={<EmailIcon />}
             link={`mailto:${resumeData.email}?subject=Interesado/a en contratarte`}
           />
-        </Box>
+        )}
       </Toolbar>
     </AppBar>
   );
