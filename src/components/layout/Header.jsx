@@ -10,6 +10,10 @@ import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import { Link } from "react-router-dom";
+import resumeData from "../../utils/resumeData";
+import ButtonIcon from "../common/ButtonIcon";
+import SendIcon from "@mui/icons-material/Send";
+import EmailIcon from '@mui/icons-material/Email';
 
 const pages = ["Historial", "Portafolio", "Contacto"];
 
@@ -27,15 +31,15 @@ const Header = () => {
   return (
     <AppBar position="static" sx={{ borderRadius: 2 }}>
       <Toolbar>
-        <IconButton
-          aria-label="Inicio"
-          size="large"
-          sx={{ backgroundColor: "primary.main" }}
-        >
-          <Link className="clear-link" to="/">
+        <Link to="/">
+          <IconButton
+            aria-label="Inicio"
+            size="large"
+            sx={{ backgroundColor: "primary.main" }}
+          >
             <HomeIcon />
-          </Link>
-        </IconButton>
+          </IconButton>
+        </Link>
 
         {/* ------------------XS------------------- */}
         <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -77,30 +81,50 @@ const Header = () => {
 
         {/* ------------------MD------------------- */}
         <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          <Button
-            onClick={handleCloseNavMenu}
-            sx={{ color: "text.primary", display: "block" }}
-          >
+          <Box alignContent="center">
             <Link className="clear-link" to="/resume">
-              Historial
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ color: "text.primary" }}
+              >
+                Historial
+              </Button>
             </Link>
-          </Button>
-          <Button
-            onClick={handleCloseNavMenu}
-            sx={{ color: "text.primary", display: "block" }}
-          >
             <Link className="clear-link" to="/portfolio">
-              Portafolio
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ color: "text.primary" }}
+              >
+                Portafolio
+              </Button>
             </Link>
-          </Button>
-          <Button
-            onClick={handleCloseNavMenu}
-            sx={{ color: "text.primary", display: "block" }}
-          >
             <Link className="clear-link" to="/contact">
-              Contacto
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ color: "text.primary" }}
+              >
+                Contacto
+              </Button>
             </Link>
-          </Button>
+          </Box>
+
+          <Box>
+            <Link to={resumeData.socials.linkedin.url} target="_blank">
+              <IconButton aria-label="LinkedIn">
+                <resumeData.socials.linkedin.icon />
+              </IconButton>
+            </Link>
+            <Link to={resumeData.socials.github.url} target="_blank">
+              <IconButton aria-label="GitHub">
+                <resumeData.socials.github.icon fontSize="small" />
+              </IconButton>
+            </Link>
+            <ButtonIcon
+              text="Contrátame"
+              icon={<EmailIcon />}
+              link={`mailto:${resumeData.email}?subject=Interesado/a en contratarte`}
+            />
+          </Box>
         </Box>
       </Toolbar>
     </AppBar>
