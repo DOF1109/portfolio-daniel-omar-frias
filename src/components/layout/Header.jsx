@@ -168,12 +168,26 @@ const Header = () => {
         {((windowWidth > 700 && windowWidth < 900) || windowWidth > 1000) && (
           <>
             <Link to={resumeData.socials.linkedin.url} target="_blank">
-              <IconButton aria-label="LinkedIn">
+              <IconButton 
+                aria-label="LinkedIn" 
+                sx={{
+                  '&:hover': {
+                    color: 'primary.main',
+                  }
+                }}
+              >
                 <resumeData.socials.linkedin.icon />
               </IconButton>
             </Link>
             <Link to={resumeData.socials.github.url} target="_blank">
-              <IconButton aria-label="GitHub">
+              <IconButton 
+                aria-label="GitHub"
+                sx={{
+                  '&:hover': {
+                    color: 'primary.main',
+                  }
+                }}
+              >
                 <resumeData.socials.github.icon />
               </IconButton>
             </Link>

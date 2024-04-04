@@ -17,19 +17,20 @@ const ProfileTimelineItem = ({ title, text, url, hasConnector }) => {
       <TimelineContent>
         <Typography>{title}: </Typography>
         <Typography color="text.secondary">
-          {url ? (
-            <Link
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              underline="none"
-              color="text.secondary"
-            >
-              {text}
-            </Link>
-          ) : (
-            text
-          )}
+          <Link
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            underline="none"
+            color="text.secondary"
+            sx={{
+              '&:hover': {
+                color: 'primary.main',
+              }
+            }}
+          >
+            {text}
+          </Link>
         </Typography>
       </TimelineContent>
     </TimelineItem>

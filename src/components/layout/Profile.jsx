@@ -5,13 +5,10 @@ import PersonIcon from "@mui/icons-material/Person";
 import resumeData from "../../utils/resumeData";
 import ProfileTimelineItem from "../common/ProfileTimelineItem";
 import ButtonIcon from "../common/ButtonIcon";
-import DownloadIcon from "@mui/icons-material/Download";
+import ContactPageIcon from '@mui/icons-material/ContactPage';
 import cvDanielOmarFrias from "../../assets/pdf/CV - Daniel Omar Frias.pdf";
 
 const Profile = () => {
-  const downloadCV = () => {
-    console.log("Descargar CV");
-  };
 
   return (
     <Box
@@ -23,7 +20,7 @@ const Profile = () => {
     >
       <Box>
         <Typography component="h1" variant="h6" fontWeight="bold">
-          {resumeData.name}
+          {resumeData.name.toUpperCase()}
         </Typography>
         <Typography component="h2" variant="body1">
           {resumeData.profession}
@@ -55,7 +52,8 @@ const Profile = () => {
           />
           <ProfileTimelineItem
             title="Dirección"
-            text={resumeData.address}
+            text={resumeData.address.text}
+            url={resumeData.address.url}
             hasConnector={true}
           />
           <ProfileTimelineItem
@@ -73,8 +71,8 @@ const Profile = () => {
         </CustomTimeline>
 
         <ButtonIcon
-          text="Descargar CV"
-          icon={<DownloadIcon />}
+          text="Ver o descargar CV"
+          icon={<ContactPageIcon />}
           link={cvDanielOmarFrias}
         />
       </Box>
