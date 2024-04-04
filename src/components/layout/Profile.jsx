@@ -50,6 +50,7 @@ const Profile = () => {
           <ProfileTimelineItem
             title="Email"
             text={resumeData.email}
+            url={`mailto:${resumeData.email}`}
             hasConnector={true}
           />
           <ProfileTimelineItem
