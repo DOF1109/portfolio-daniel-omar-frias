@@ -4,7 +4,7 @@ import resumeData from "../../utils/resumeData"
 
 const About = () => {
   return (
-    <Box>
+    <Box component="section">
         <SectionTitle text="Sobre mí" />
         <Typography variant="body2" lineHeight="1.8" whiteSpace="pre-wrap">
             {resumeData.about}

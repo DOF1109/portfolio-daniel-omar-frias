@@ -133,7 +133,7 @@ const Header = () => {
                       : "text.primary",
                 }}
               >
-                Historial
+                Trayectoria
               </Button>
             </Link>
             <Link className="clear-link" to="/portfolio">

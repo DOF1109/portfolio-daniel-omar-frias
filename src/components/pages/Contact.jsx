@@ -1,5 +1,13 @@
-const Contact = () => {
-  return <div>Contact</div>;
-};
+import { Box } from "@mui/material";
+import SectionTitle from "../common/SectionTitle";
 
-export default Contact;
+const Contact = () => {
+  return (
+    <Box component="section">
+        <SectionTitle text="Contacto" />
+        
+    </Box>
+  )
+}
+
+export default Contact

@@ -1,6 +1,12 @@
+import { Box } from "@mui/material"
+import SectionTitle from "../common/SectionTitle"
+
 const Resume = () => {
   return (
-    <div>Resume</div>
+    <Box component="section">
+        <SectionTitle text="Trayectoria" />
+        
+    </Box>
   )
 }
 
