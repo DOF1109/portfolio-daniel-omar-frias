@@ -1,10 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import ProfilePhoto from "../../assets/images/daniel-omar-frias-foto.jpg";
 import CustomTimeline from "../common/CustomTimeline";
-import PersonIcon from "@mui/icons-material/Person";
 import resumeData from "../../utils/resumeData";
 import ProfileTimelineItem from "../common/ProfileTimelineItem";
 import ButtonIcon from "../common/ButtonIcon";
+import PersonIcon from "@mui/icons-material/Person";
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import cvDanielOmarFrias from "../../assets/pdf/CV - Daniel Omar Frias.pdf";
 

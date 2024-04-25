@@ -22,6 +22,8 @@ const resumeData = {
       icon: GitHubIcon,
     },
   },
+
+  about: ""
 };
 
 export default resumeData;
