@@ -120,7 +120,7 @@ const Header = () => {
                   color: location.pathname === "/" ? "primary" : "text.primary",
                 }}
               >
-                Inicio
+                Sobre mí
               </Button>
             </Link>
             <Link className="clear-link" to="/resume">

@@ -12,7 +12,7 @@ const Layout = () => {
         bgcolor="background.paper"
         borderRadius={2}
         boxShadow={5}
-        p={3}
+        p={4}
         my={3}
       >
         <Outlet />
