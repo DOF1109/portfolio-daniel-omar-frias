@@ -26,7 +26,7 @@ const CustomTimeline = ({ title, icon, children }) => {
           <TimelineConnector sx={{ height: "2rem" }} />
         </TimelineSeparator>
         <TimelineContent>
-          <Typography variant="h6">{title}</Typography>
+          <Typography variant="h6" mt={1}>{title}</Typography>
         </TimelineContent>
       </TimelineItem>
 

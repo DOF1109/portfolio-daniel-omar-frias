@@ -42,7 +42,7 @@ const resumeData = {
     {
         title: "Professional Developer - Digital House",
         date: "Octubre 2022 - Actualidad",
-        description: "Una carrera pensada y diseñada por Mercado Libre y Globant junto a Digital House, donde imparten conocimientos técnicos y soft skills para el desarrollo web.",
+        description: "Carrera pensada y diseñada por Mercado Libre y Globant junto a Digital House, donde imparten conocimientos técnicos y soft skills para el desarrollo web.",
     },
     {
         title: "Curso de Responsive Web Design - EDteam",
@@ -67,7 +67,7 @@ const resumeData = {
     {
         title: "Técnico en Industrias de Procesos - EET N° 3.143",
         date: "Enero 2006 - Diciembre 2011",
-        description: "Capacitación profesional para desempeñarse en el ámbito industrial, específicamente en la producción y control de procesos.",
+        description: "Capacitación profesional para desempeñarse en el ámbito industrial.",
     },
     {
         title: "Diploma de Capacidad en Inglés - Cultural Argentino Británica de Salta",
