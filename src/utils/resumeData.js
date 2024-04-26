@@ -7,7 +7,7 @@ const resumeData = {
   email: "friasdaniel.1109@gmail.com",
   address: {
     url: "https://www.google.com/maps/place/Salta/@-24.2077744,-65.4550191,7z/data=!3m1!4b1!4m6!3m5!1s0x941b0d2938ead0c7:0x8b4a1bd1f6c37998!8m2!3d-25.2529539!4d-64.7162415!16zL20vMDJrX2Zw?entry=ttu",
-    text: "Salta, Argentina"
+    text: "Salta, Argentina",
   },
 
   socials: {
@@ -23,58 +23,150 @@ const resumeData = {
     },
   },
 
-  about: "🚀 ¡Hola!, soy un Full Stack Web Developer con una sólida formación académica. Aplico metodologías ágiles, principios SOLID, ETC y DRY.\n\n🔟 Soy adaptable, colaborativo y centrado en objetivos. Mis habilidades blandas me permiten trabajar excelente en equipo. Creo en brindar soluciones a través de la tecnología.\n\n🎯 Busco aportar mi mentalidad abierta y dinamismo, creciendo tanto personal como profesionalmente para poder aportar un valor agregado a mi trabajo.\n\n💬 Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos una encuentro o una llamada.",
+  about:
+    "🚀 ¡Hola!, soy un Full Stack Web Developer con una sólida formación académica. Aplico metodologías ágiles, principios SOLID, ETC y DRY.\n\n🔟 Soy adaptable, colaborativo y centrado en objetivos. Mis habilidades blandas me permiten trabajar excelente en equipo. Creo en brindar soluciones a través de la tecnología.\n\n🎯 Busco aportar mi mentalidad abierta y dinamismo, creciendo tanto personal como profesionalmente para poder aportar un valor agregado a mi trabajo.\n\n💬 Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos una encuentro o una llamada.",
 
   experiences: [
     {
-        title: "Instrumentista Industrial - TGN S.A.",
-        date: "Ene. 2018 - Actualidad",
-        description: "Programación de PLCs. Coordinación de trabajos con contratistas externos. Relación con clientes y proveedores. Mantenimiento de sistemas de automatización industrial.",
+        title: "Full Stack Developer - Dental Clinic",
+        date: "Oct. 2023 - Actualidad",
+        description:
+          "Programación de una aplicación web para una clínica dental con diferentes perfiles de usuario.",
+      },
+    {
+        title: "Android Developer - ScrAPPer",
+        date: "Nov. 2019 - Mar. 2020",
+        description:
+          "Programación de una aplicación Android para realizar el seguimiento de los equipos “scraper” por tuberías industriales.",
+      },
+    {
+      title: "Instrumentista Industrial - TGN S.A.",
+      date: "Ene. 2018 - Actualidad",
+      description:
+        "Programación de PLCs. Coordinación de trabajos con contratistas externos. Relación con clientes y proveedores. Mantenimiento de sistemas de automatización industrial.",
     },
     {
-        title: "Servicio técnico - Autónomo",
-        date: "Ene. 2014 - Dic. 2017",
-        description: "Mantenimiento, instalación, configuración y actualización de sistemas operativos, software y hardware.",
-    }
+      title: "Servicio técnico - Autónomo",
+      date: "Ene. 2014 - Dic. 2017",
+      description:
+        "Mantenimiento, instalación, configuración y actualización de sistemas operativos, software y hardware.",
+    },
   ],
 
   education: [
     {
-        title: "Professional Developer - Digital House",
-        date: "Oct. 2022 - Actualidad",
-        description: "Carrera de desarrollo web diseñada por Mercado Libre, Globant y Digital House, donde imparten conocimientos técnicos y soft skills.",
+      title: "Professional Developer - Digital House",
+      date: "Oct. 2022 - Actualidad",
+      description:
+        "Carrera de desarrollo web diseñada por Mercado Libre, Globant y Digital House, donde imparten conocimientos técnicos y soft skills.",
     },
     {
-        title: "Curso de Responsive Web Design - EDteam",
-        date: "Sep. 2022 - Oct. 2022",
-        description: "Diseño de sitios web y aplicaciones para cualquier tamaño de pantalla.",
+      title: "Curso de Responsive Web Design - EDteam",
+      date: "Sep. 2022 - Oct. 2022",
+      description:
+        "Diseño de sitios web y aplicaciones para cualquier tamaño de pantalla.",
     },
     {
-        title: "Curso de HTML5 y CSS3 - Azul School",
-        date: "Jul. 2022 - Sep. 2022",
-        description: "Maquetación y desarrollo web.",
+      title: "Curso de HTML5 y CSS3 - Azul School",
+      date: "Jul. 2022 - Sep. 2022",
+      description: "Maquetación y desarrollo web.",
     },
     {
-        title: "Curso de WordPress - EDteam",
-        date: "May. 2022 - Jun. 2022",
-        description: "Creación y diseño de sitios web con WordPress.",
+      title: "Curso de WordPress - EDteam",
+      date: "May. 2022 - Jun. 2022",
+      description: "Creación y diseño de sitios web con WordPress.",
     },
     {
-        title: "Técnico Universitario en Programación - Universidad Nacional de Salta",
-        date: "Feb. 2014 - Mar. 2019",
-        description: "Carrera universitaria con formación en análisis, diseño e implementación de programas informáticos.",
+      title:
+        "Técnico Universitario en Programación - Universidad Nacional de Salta",
+      date: "Feb. 2014 - Mar. 2019",
+      description:
+        "Carrera universitaria con formación en análisis, diseño e implementación de programas informáticos.",
     },
     {
-        title: "Técnico en Industrias de Procesos - EET N° 3.143",
-        date: "Ene. 2006 - Dic. 2011",
-        description: "Capacitación profesional para desempeñarse en el ámbito industrial.",
+      title: "Técnico en Industrias de Procesos - EET N° 3.143",
+      date: "Ene. 2006 - Dic. 2011",
+      description:
+        "Capacitación profesional para desempeñarse en el ámbito industrial.",
     },
     {
-        title: "Diploma de Capacidad en Inglés - Cultural Argentino Británica de Salta",
-        date: "Mar. 2002 - Dic. 2010",
-        description: "Capacitación para comunicarse en inglés. Además de redacción y traducción del idioma.",
-    }
-  ]
+      title:
+        "Diploma de Capacidad en Inglés - Cultural Argentino Británica de Salta",
+      date: "Mar. 2002 - Dic. 2010",
+      description:
+        "Capacitación para comunicarse en inglés. Además de redacción y traducción del idioma.",
+    },
+  ],
+
+  skills: [
+    {
+      title: "Front-End",
+      description: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Material UI",
+        "Bootstrap",
+        "SASS",
+        "Responsive Web Design",
+        "APIs",
+      ],
+    },
+    {
+        title: "Back-End",
+        description: [
+          "Java",
+          "Spring Boot",
+          "Hibernate",
+          "JPA",
+          "Maven",
+          "API Rest",
+          "Swagger",
+          "MVC",
+        ],
+      },
+      {
+        title: "Bases de datos",
+        description: [
+          "MySQL Workbench",
+          "SQL",
+        ],
+      },
+      {
+        title: "Infraestructura",
+        description: [
+          "AWS Cloud",
+          "Docker",
+        ],
+      },
+      {
+        title: "Testing",
+        description: [
+          "Postman",
+          "MockMVC",
+        ],
+      },
+      {
+        title: "Control y versionado",
+        description: [
+          "Git",
+          "GitHub",
+          "Scrum",
+        ],
+      },
+      {
+        title: "Habilidades útiles",
+        description: [
+          "Inglés",
+          "Comunicación efectiva",
+          "Colaboración",
+          "Adaptabilidad",
+          "Aprendizaje continuo",
+          "Resolución de problemas",
+        ],
+      },
+  ],
 };
 
 export default resumeData;
