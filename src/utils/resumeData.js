@@ -127,6 +127,17 @@ const resumeData = {
         ],
       },
       {
+        title: "Habilidades útiles",
+        description: [
+          "Inglés",
+          "Comunicación efectiva",
+          "Colaboración",
+          "Adaptabilidad",
+          "Aprendizaje continuo",
+          "Resolución de problemas",
+        ],
+      },
+      {
         title: "Bases de datos",
         description: [
           "MySQL Workbench",
@@ -153,17 +164,6 @@ const resumeData = {
           "Git",
           "GitHub",
           "Scrum",
-        ],
-      },
-      {
-        title: "Habilidades útiles",
-        description: [
-          "Inglés",
-          "Comunicación efectiva",
-          "Colaboración",
-          "Adaptabilidad",
-          "Aprendizaje continuo",
-          "Resolución de problemas",
         ],
       },
   ],
