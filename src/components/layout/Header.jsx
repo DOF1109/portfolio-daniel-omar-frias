@@ -165,27 +165,27 @@ const Header = () => {
           </Box>
         </Box>
 
-        {((windowWidth > 700 && windowWidth < 900) || windowWidth > 1000) && (
+        {((windowWidth > 700 && windowWidth < 900) || windowWidth > 1040) && (
           <>
             <Link to={resumeData.socials.linkedin.url} target="_blank">
-              <IconButton 
-                aria-label="LinkedIn" 
+              <IconButton
+                aria-label="LinkedIn"
                 sx={{
-                  '&:hover': {
-                    color: 'primary.main',
-                  }
+                  "&:hover": {
+                    color: "primary.main",
+                  },
                 }}
               >
                 <resumeData.socials.linkedin.icon />
               </IconButton>
             </Link>
             <Link to={resumeData.socials.github.url} target="_blank">
-              <IconButton 
+              <IconButton
                 aria-label="GitHub"
                 sx={{
-                  '&:hover': {
-                    color: 'primary.main',
-                  }
+                  "&:hover": {
+                    color: "primary.main",
+                  },
                 }}
               >
                 <resumeData.socials.github.icon />
@@ -193,7 +193,7 @@ const Header = () => {
             </Link>
           </>
         )}
-        {windowWidth >= 600 && (
+        {((windowWidth >= 620 && windowWidth < 900) || windowWidth > 910) && (
           <ButtonIcon
             text="Contrátame"
             icon={<EmailIcon />}

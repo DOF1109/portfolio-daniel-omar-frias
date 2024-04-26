@@ -22,6 +22,7 @@ const ProfileTimelineItem = ({ title, text, url, hasConnector }) => {
           rel="noopener noreferrer"
           underline="none"
           color="text.secondary"
+          variant="body2"
           sx={{
             "&:hover": {
               color: "primary.main",

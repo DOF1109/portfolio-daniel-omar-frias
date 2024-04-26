@@ -29,7 +29,7 @@ const resumeData = {
     {
         title: "Instrumentista Industrial - TGN S.A.",
         date: "Enero 2018 - Actualidad",
-        description: "Programación de PLCs. Coordinación de equipos de trabajo para la ejecución de tareas realizadas con contratistas externos. Relación con clientes y proveedores. Mantenimiento de sistemas de automatización de planta compresora de gas.",
+        description: "Programación de PLCs. Coordinación de equipos de trabajo para la ejecución de tareas realizadas con contratistas externos. Relación con clientes y proveedores. Mantenimiento de sistemas de automatización industrial.",
     },
     {
         title: "Servicio técnico - Autónomo",
