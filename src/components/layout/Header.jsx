@@ -87,7 +87,7 @@ const Header = () => {
             >
               <MenuItem onClick={handleCloseNavMenu}>
                 <Link className="clear-link" to="/resume">
-                  Historial
+                  Trayectoria
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>

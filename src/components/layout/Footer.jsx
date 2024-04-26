@@ -10,15 +10,17 @@ const Footer = () => {
       boxShadow={5}
       display="flex"
       alignItems="center"
-      justifyContent="space-between"
+      justifyContent="center"
       px={3}
       py={2}
     >
-      <Typography variant="body1">{resumeData.name}</Typography>
       <Typography variant="caption" color="text.secondary">
         Desarrollado por
         <Link className="clear-link" to="/">
-          <Typography variant="caption" color="primary"> {resumeData.name}</Typography>
+          <Typography variant="caption" color="primary">
+            {" "}
+            {resumeData.name}
+          </Typography>
         </Link>
       </Typography>
     </Box>

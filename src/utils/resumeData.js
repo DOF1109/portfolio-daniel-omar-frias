@@ -28,50 +28,50 @@ const resumeData = {
   experiences: [
     {
         title: "Instrumentista Industrial - TGN S.A.",
-        date: "Enero 2018 - Actualidad",
-        description: "Programación de PLCs. Coordinación de equipos de trabajo para la ejecución de tareas realizadas con contratistas externos. Relación con clientes y proveedores. Mantenimiento de sistemas de automatización industrial.",
+        date: "Ene. 2018 - Actualidad",
+        description: "Programación de PLCs. Coordinación de trabajos con contratistas externos. Relación con clientes y proveedores. Mantenimiento de sistemas de automatización industrial.",
     },
     {
         title: "Servicio técnico - Autónomo",
-        date: "Enero 2014 - Diciembre 2017",
-        description: "Mantenimientos, instalación, configuración y actualización de sistemas operativos, software y hardware.",
+        date: "Ene. 2014 - Dic. 2017",
+        description: "Mantenimiento, instalación, configuración y actualización de sistemas operativos, software y hardware.",
     }
   ],
 
   education: [
     {
         title: "Professional Developer - Digital House",
-        date: "Octubre 2022 - Actualidad",
-        description: "Carrera pensada y diseñada por Mercado Libre y Globant junto a Digital House, donde imparten conocimientos técnicos y soft skills para el desarrollo web.",
+        date: "Oct. 2022 - Actualidad",
+        description: "Carrera de desarrollo web diseñada por Mercado Libre, Globant y Digital House, donde imparten conocimientos técnicos y soft skills.",
     },
     {
         title: "Curso de Responsive Web Design - EDteam",
-        date: "Septiembre 2022 - Octubre 2022",
+        date: "Sep. 2022 - Oct. 2022",
         description: "Diseño de sitios web y aplicaciones para cualquier tamaño de pantalla.",
     },
     {
         title: "Curso de HTML5 y CSS3 - Azul School",
-        date: "Julio 2022 - Septiembre 2022",
+        date: "Jul. 2022 - Sep. 2022",
         description: "Maquetación y desarrollo web.",
     },
     {
         title: "Curso de WordPress - EDteam",
-        date: "Mayo 2022 - Junio 2022",
+        date: "May. 2022 - Jun. 2022",
         description: "Creación y diseño de sitios web con WordPress.",
     },
     {
         title: "Técnico Universitario en Programación - Universidad Nacional de Salta",
-        date: "Febrero 2014 - Marzo 2019",
-        description: "Carrera universitaria con formación sólida en análisis, diseño e implementación de programas informáticos.",
+        date: "Feb. 2014 - Mar. 2019",
+        description: "Carrera universitaria con formación en análisis, diseño e implementación de programas informáticos.",
     },
     {
         title: "Técnico en Industrias de Procesos - EET N° 3.143",
-        date: "Enero 2006 - Diciembre 2011",
+        date: "Ene. 2006 - Dic. 2011",
         description: "Capacitación profesional para desempeñarse en el ámbito industrial.",
     },
     {
         title: "Diploma de Capacidad en Inglés - Cultural Argentino Británica de Salta",
-        date: "Marzo 2002 - Diciembre 2010",
+        date: "Mar. 2002 - Dic. 2010",
         description: "Capacitación para comunicarse en inglés. Además de redacción y traducción del idioma.",
     }
   ]
