@@ -17,7 +17,7 @@ const About = () => {
     <>
       <Box component="section" mb={5}>
         <SectionTitle text="Sobre mí" />
-        <Typography variant="body2" lineHeight="1.8" whiteSpace="pre-wrap">
+        <Typography variant="body2" lineHeight="1.8" whiteSpace="pre-wrap" mt={2}>
           {resumeData.about}
         </Typography>
       </Box>
@@ -33,7 +33,10 @@ const About = () => {
         {resumeData.skills.map((skill) => {
           return (
             <Grid item key={skill.title} xs={12} sm={6} md={5} lg={4}>
-              <Paper elevation={3} sx={{ p: 3, height: "100%" }}>
+              <Paper
+                elevation={3}
+                sx={{ p: 3, height: "100%", borderRadius: "8px" }}
+              >
                 <Typography variant="h6" pb={1}>
                   {skill.title}
                 </Typography>
