@@ -102,15 +102,15 @@ const resumeData = {
     {
       title: "Front-End",
       description: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
         "React",
         "Material UI",
-        "Bootstrap",
-        "SASS",
         "Responsive Web Design",
         "APIs",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "SASS",
       ],
     },
     {
@@ -119,11 +119,11 @@ const resumeData = {
           "Java",
           "Spring Boot",
           "Hibernate",
+          "API Rest",
+          "MVC",
           "JPA",
           "Maven",
-          "API Rest",
           "Swagger",
-          "MVC",
         ],
       },
       {
@@ -131,10 +131,10 @@ const resumeData = {
         description: [
           "Inglés",
           "Comunicación efectiva",
-          "Colaboración",
-          "Adaptabilidad",
           "Aprendizaje continuo",
           "Resolución de problemas",
+          "Colaboración",
+          "Adaptabilidad",
         ],
       },
       {
