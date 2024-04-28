@@ -1,11 +1,4 @@
-import {
-  Box,
-  Grid,
-  List,
-  ListItem,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, List, ListItem, Paper, Typography } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 import resumeData from "../../utils/resumeData";
 import { TimelineDot } from "@mui/lab";
@@ -15,7 +8,12 @@ const About = () => {
     <>
       <Box component="section" mb={5}>
         <SectionTitle text="Sobre mí" />
-        <Typography variant="body2" lineHeight="1.8" whiteSpace="pre-wrap">
+        <Typography
+          variant="body2"
+          lineHeight="1.8"
+          whiteSpace="pre-wrap"
+          mt={2}
+        >
           {resumeData.about}
         </Typography>
       </Box>
