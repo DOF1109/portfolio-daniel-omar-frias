@@ -1,13 +1,25 @@
 import { Box, Button, Grid, TextField } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
+import { useFormik } from "formik";
 
 const Contact = () => {
+  const {handleChange, handleSubmit} = useFormik({
+    initialValues: {
+        name: "",
+        email: "",
+        message: ""
+    },
+    onSubmit: (data) => {
+        console.log("submit");
+    }
+  })
+
   return (
     <Box component="section">
       <Grid container spacing={3} component="section">
         <Grid item xs={12} sm={6}>
           <SectionTitle text="Formulario de contacto" />
-          <Box component="form" onSubmit={() => {}}>
+          <Box component="form" onSubmit={handleSubmit}>
             <TextField
               name="name"
               label="Nombre"
@@ -29,7 +41,7 @@ const Contact = () => {
             <Button
               type="submit"
               variant="contained"
-              sx={{ borderRadius: "50px" }}
+              sx={{ textTransform: "none", borderRadius: "50px" }}
             >
               Enviar
             </Button>
