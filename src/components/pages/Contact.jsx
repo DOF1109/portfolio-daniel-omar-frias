@@ -2,6 +2,7 @@ import { Box, Button, Grid, TextField } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const { handleChange, handleSubmit, errors } = useFormik({
@@ -11,7 +12,23 @@ const Contact = () => {
       message: "",
     },
     onSubmit: (data) => {
-      console.log(data);
+      Swal.fire({
+        title: "¿Confirmar envío?",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si",
+        cancelButtonText: "Cancelar",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Enviado",
+            icon: "success",
+            timer: 3000,
+          })
+          console.log(data);
+        }
+      });
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -35,12 +52,7 @@ const Contact = () => {
       <Grid container spacing={4} component="section">
         <Grid item xs={12} sm={6}>
           <SectionTitle text="Formulario de contacto" />
-          <Grid
-            container
-            spacing={3}
-            component="form"
-            onSubmit={handleSubmit}
-          >
+          <Grid container spacing={3} component="form" onSubmit={handleSubmit}>
             <Grid item xs={12} lg={10} mt={2}>
               <TextField
                 name="name"
