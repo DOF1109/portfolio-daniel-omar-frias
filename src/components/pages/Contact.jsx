@@ -1,9 +1,33 @@
-import { Box, Button, Grid, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogTitle,
+  Grid,
+  TextField,
+} from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useState } from "react";
 
 const Contact = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleSend = () => {
+    console.log("Email enviado");
+    handleClose();
+  };
+
   const { handleChange, handleSubmit, errors } = useFormik({
     initialValues: {
       name: "",
@@ -11,7 +35,7 @@ const Contact = () => {
       message: "",
     },
     onSubmit: (data) => {
-      console.log(data);
+      handleClickOpen();
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -81,6 +105,35 @@ const Contact = () => {
               </Button>
             </Grid>
           </Grid>
+          <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+            PaperProps={{ sx: { p: 1 } }}
+          >
+            <DialogTitle id="alert-dialog-title">
+              {"¿Confirma el envío?"}
+            </DialogTitle>
+            <DialogActions sx={{ justifyContent: "center" }}>
+              <Button
+                onClick={handleClose}
+                variant="contained"
+                color="error"
+                sx={{ textTransform: "none", borderRadius: "50px" }}
+              >
+                Cancelar
+              </Button>
+              <Button
+                onClick={handleSend}
+                autoFocus
+                variant="contained"
+                sx={{ textTransform: "none", borderRadius: "50px" }}
+              >
+                Confirmar
+              </Button>
+            </DialogActions>
+          </Dialog>
         </Grid>
         <Grid item xs={12} sm={6}>
           <SectionTitle text="Información de contacto" />
