@@ -135,6 +135,7 @@ const Contact = () => {
             </DialogActions>
           </Dialog>
         </Grid>
+        
         <Grid item xs={12} sm={6}>
           <SectionTitle text="Información de contacto" />
         </Grid>
