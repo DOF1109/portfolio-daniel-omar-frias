@@ -2,11 +2,8 @@ import { Box, Button, Grid, TextField } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import Swal from "sweetalert2";
-import useTheme from "@mui/material/styles/useTheme";
 
 const Contact = () => {
-  const theme = useTheme();
   const { handleChange, handleSubmit, errors } = useFormik({
     initialValues: {
       name: "",
@@ -14,23 +11,7 @@ const Contact = () => {
       message: "",
     },
     onSubmit: (data) => {
-      Swal.fire({
-        title: "¿Confirmar envío?",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Si",
-        cancelButtonText: "Cancelar",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire({
-            title: "Enviado",
-            icon: "success",
-            timer: 3000,
-          });
-          console.log(data);
-        }
-      });
+      console.log(data);
     },
     validationSchema: Yup.object({
       name: Yup.string()
