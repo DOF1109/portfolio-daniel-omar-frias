@@ -3,8 +3,10 @@ import SectionTitle from "../common/SectionTitle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Swal from "sweetalert2";
+import useTheme from "@mui/material/styles/useTheme";
 
 const Contact = () => {
+  const theme = useTheme();
   const { handleChange, handleSubmit, errors } = useFormik({
     initialValues: {
       name: "",
@@ -25,7 +27,7 @@ const Contact = () => {
             title: "Enviado",
             icon: "success",
             timer: 3000,
-          })
+          });
           console.log(data);
         }
       });
