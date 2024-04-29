@@ -15,6 +15,7 @@ const Contact = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string()
+        .trim()
         .min(3, "El nombre debe tener al menos 3 caracteres")
         .max(50, "El nombre debe tener como maxímo 50 caracteres")
         .required("Complete este campo"),
@@ -22,6 +23,7 @@ const Contact = () => {
         .matches(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/, "Ingrese un email válido")
         .required("Complete este campo"),
       message: Yup.string()
+        .trim()
         .min(4, "El mensaje debe tener al menos 4 caracteres")
         .required("Complete este campo"),
     }),
