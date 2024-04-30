@@ -11,6 +11,8 @@ import SectionTitle from "../common/SectionTitle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
+import { ToastContainer, Flip, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [open, setOpen] = useState(false);
@@ -24,8 +26,23 @@ const Contact = () => {
   };
 
   const handleSend = () => {
-    console.log("Email enviado");
+    // console.log("Email enviado");
     handleClose();
+    notify();
+  };
+
+  const notify = () => {
+    toast.success("Enviado!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Flip,
+    });
   };
 
   const { handleChange, handleSubmit, errors } = useFormik({
@@ -134,8 +151,21 @@ const Contact = () => {
               </Button>
             </DialogActions>
           </Dialog>
+          <ToastContainer
+            position="top-center"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            transition="Flip"
+          />
         </Grid>
-        
+
         <Grid item xs={12} sm={6}>
           <SectionTitle text="Información de contacto" />
         </Grid>
