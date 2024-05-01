@@ -5,7 +5,9 @@ import {
   DialogActions,
   DialogTitle,
   Grid,
+  IconButton,
   TextField,
+  Typography,
 } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 import { useFormik } from "formik";
@@ -14,6 +16,8 @@ import { useState } from "react";
 import { ToastContainer, Flip, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
+import resumeData from "../../utils/resumeData";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [open, setOpen] = useState(false);
@@ -189,6 +193,70 @@ const Contact = () => {
 
         <Grid item xs={12} sm={6}>
           <SectionTitle text="Información de contacto" />
+          <Grid container spacing={3}>
+            <Grid item xs={12} display="flex" alignItems="center" mt={2}>
+                <Typography mr={1}>Profesión:</Typography>
+                <Typography 
+                  color="text.secondary"
+                  variant="body2"
+                >
+                  {resumeData.profession}
+                </Typography>
+            </Grid>
+            <Grid item xs={12} display="flex" alignItems="center">
+                <Typography mr={1}>Trabajo:</Typography>
+                <Typography 
+                  color="text.secondary"
+                  variant="body2"
+                >
+                  {resumeData.job}
+                </Typography>
+            </Grid>
+            <Grid item xs={12} display="flex" alignItems="center">
+                <Typography mr={1}>Email:</Typography>
+                <Typography 
+                  color="text.secondary"
+                  variant="body2"
+                >
+                  {resumeData.email}
+                </Typography>
+            </Grid>
+            <Grid item xs={12} display="flex" alignItems="center">
+                <Typography mr={1}>Dirección:</Typography>
+                <Typography 
+                  color="text.secondary"
+                  variant="body2"
+                >
+                  {resumeData.address.text}
+                </Typography>
+            </Grid>
+            <Grid item  xs={12}>
+                <Link to={resumeData.socials.linkedin.url} target="_blank">
+                <IconButton
+                    aria-label="LinkedIn"
+                    sx={{
+                    "&:hover": {
+                        color: "primary.main",
+                    },
+                    }}
+                >
+                    <resumeData.socials.linkedin.icon />
+                </IconButton>
+                </Link>
+                <Link to={resumeData.socials.github.url} target="_blank">
+                <IconButton
+                    aria-label="GitHub"
+                    sx={{
+                    "&:hover": {
+                        color: "primary.main",
+                    },
+                    }}
+                >
+                    <resumeData.socials.github.icon />
+                </IconButton>
+                </Link>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Box>
