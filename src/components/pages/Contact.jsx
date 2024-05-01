@@ -13,6 +13,7 @@ import * as Yup from "yup";
 import { useState } from "react";
 import { ToastContainer, Flip, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [open, setOpen] = useState(false);
@@ -26,9 +27,8 @@ const Contact = () => {
   };
 
   const handleSend = () => {
-    // console.log("Email enviado");
     handleClose();
-    notify();
+    sendEmail();
   };
 
   const notify = () => {
@@ -45,7 +45,7 @@ const Contact = () => {
     });
   };
 
-  const { handleChange, handleSubmit, errors } = useFormik({
+  const { handleChange, handleSubmit, errors, values } = useFormik({
     initialValues: {
       name: "",
       email: "",
@@ -70,6 +70,31 @@ const Contact = () => {
     }),
     validateOnChange: false,
   });
+
+  let templateParams = {
+    user_name: values.name,
+    user_email: values.email,
+    message: values.message,
+  };
+
+  const sendEmail = () => {
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          notify();
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
+  };
 
   return (
     <Box component="section">
