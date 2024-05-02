@@ -156,7 +156,7 @@ const resumeData = {
     },
   ],
 
-  portfolio: [
+  projects: [
     {
       title: "Dental Care",
       description:
