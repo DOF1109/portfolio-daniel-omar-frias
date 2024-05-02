@@ -25,7 +25,7 @@ const resumeData = {
   },
 
   about:
-    "🚀 ¡Hola!, soy un Full Stack Web Developer con una sólida formación académica. Aplico metodologías ágiles, principios SOLID, ETC y DRY.\n\n🔟 Soy adaptable, colaborativo y centrado en objetivos. Mis habilidades blandas me permiten trabajar excelente en equipo. Creo en brindar soluciones a través de la tecnología.\n\n🎯 Busco aportar mi mentalidad abierta y dinamismo, creciendo tanto personal como profesionalmente para poder aportar un valor agregado a mi trabajo.\n\n💬 Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos una encuentro o una llamada.",
+    "💠 ¡Hola!, soy un Full Stack Web Developer con una sólida formación académica. Aplico metodologías ágiles, principios SOLID, ETC y DRY.\n\n🔹 Soy adaptable, colaborativo y centrado en objetivos. Mis habilidades blandas me permiten trabajar excelente en equipo. Creo en brindar soluciones a través de la tecnología.\n\n🔷 Busco aportar mi mentalidad abierta y dinamismo, creciendo tanto personal como profesionalmente para poder aportar un valor agregado a mi trabajo.\n\n✅ Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos una encuentro o una llamada.",
 
   experiences: [
     {
@@ -128,7 +128,7 @@ const resumeData = {
         ],
       },
       {
-        title: "Habilidades útiles",
+        title: "Útiles",
         description: [
           "Inglés",
           "Comunicación efectiva",

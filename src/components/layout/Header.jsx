@@ -165,7 +165,7 @@ const Header = () => {
           </Box>
         </Box>
 
-        {((windowWidth > 720 && windowWidth < 900) || windowWidth > 1050) && (
+        {((windowWidth > 720 && windowWidth < 900) || windowWidth > 1060) && (
           <>
             <Link to={resumeData.socials.linkedin.url} target="_blank">
               <IconButton
@@ -193,7 +193,7 @@ const Header = () => {
             </Link>
           </>
         )}
-        {((windowWidth >= 640 && windowWidth < 900) || windowWidth > 930) && (
+        {((windowWidth >= 650 && windowWidth < 900) || windowWidth > 950) && (
           <ButtonIcon
             text="Contrátame"
             icon={<EmailIcon />}

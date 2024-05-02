@@ -1,40 +1,12 @@
-import {
-  Box,
-  Button,
-  Dialog,
-  DialogActions,
-  DialogTitle,
-  Grid,
-  IconButton,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Grid, TextField } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
 import { ToastContainer, Flip, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
-import resumeData from "../../utils/resumeData";
-import { Link } from "react-router-dom";
 
 const Contact = () => {
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleSend = () => {
-    handleClose();
-    sendEmail();
-  };
-
   const { handleChange, handleSubmit, errors, values } = useFormik({
     initialValues: {
       name: "",
@@ -42,7 +14,7 @@ const Contact = () => {
       message: "",
     },
     onSubmit: (data) => {
-      handleClickOpen();
+      sendEmail();
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -84,7 +56,7 @@ const Contact = () => {
       },
       {
         position: "top-center",
-        autoClose: 4000,
+        autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -98,167 +70,72 @@ const Contact = () => {
 
   return (
     <Box component="section">
-      <Grid container spacing={4} component="section">
-        <Grid item xs={12} sm={6}>
-          <SectionTitle text="Formulario de contacto" />
-          <Grid container spacing={3} component="form" onSubmit={handleSubmit}>
-            <Grid item xs={12} lg={10} mt={2}>
-              <TextField
-                name="name"
-                label="Nombre"
-                variant="outlined"
-                onChange={handleChange}
-                error={errors.name ? true : false}
-                helperText={errors.name}
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12} lg={10}>
-              <TextField
-                name="email"
-                label="Email"
-                variant="outlined"
-                onChange={handleChange}
-                error={errors.email ? true : false}
-                helperText={errors.email}
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12} lg={10}>
-              <TextField
-                name="message"
-                label="Mensaje"
-                variant="outlined"
-                onChange={handleChange}
-                error={errors.message ? true : false}
-                helperText={errors.message}
-                multiline
-                rows={4}
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12} lg={10} display="flex" justifyContent="center">
-              <Button
-                type="submit"
-                variant="contained"
-                sx={{ textTransform: "none", borderRadius: "50px" }}
-              >
-                Enviar
-              </Button>
-            </Grid>
-          </Grid>
-          <Dialog
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-            PaperProps={{ sx: { p: 1 } }}
-          >
-            <DialogTitle id="alert-dialog-title">
-              {"¿Confirma el envío?"}
-            </DialogTitle>
-            <DialogActions sx={{ justifyContent: "center" }}>
-              <Button
-                onClick={handleClose}
-                variant="contained"
-                color="error"
-                sx={{ textTransform: "none", borderRadius: "50px" }}
-              >
-                Cancelar
-              </Button>
-              <Button
-                onClick={handleSend}
-                autoFocus
-                variant="contained"
-                sx={{ textTransform: "none", borderRadius: "50px" }}
-              >
-                Confirmar
-              </Button>
-            </DialogActions>
-          </Dialog>
-          <ToastContainer
-            position="top-center"
-            autoClose={3000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-            transition="Flip"
+      <SectionTitle text="Formulario de contacto" />
+      <Grid
+        container
+        spacing={3}
+        justifyContent="center"
+        component="form"
+        onSubmit={handleSubmit}
+      >
+        <Grid item xs={12} sm={9} lg={8} mt={3}>
+          <TextField
+            name="name"
+            label="Nombre"
+            variant="outlined"
+            onChange={handleChange}
+            error={errors.name ? true : false}
+            helperText={errors.name}
+            fullWidth
           />
         </Grid>
-
-        <Grid item xs={12} sm={6}>
-          <SectionTitle text="Información de contacto" />
-          <Grid container spacing={3}>
-            <Grid item xs={12} display="flex" alignItems="center" mt={2}>
-                <Typography mr={1}>Profesión:</Typography>
-                <Typography 
-                  color="text.secondary"
-                  variant="body2"
-                >
-                  {resumeData.profession}
-                </Typography>
-            </Grid>
-            <Grid item xs={12} display="flex" alignItems="center">
-                <Typography mr={1}>Trabajo:</Typography>
-                <Typography 
-                  color="text.secondary"
-                  variant="body2"
-                >
-                  {resumeData.job}
-                </Typography>
-            </Grid>
-            <Grid item xs={12} display="flex" alignItems="center">
-                <Typography mr={1}>Email:</Typography>
-                <Typography 
-                  color="text.secondary"
-                  variant="body2"
-                >
-                  {resumeData.email}
-                </Typography>
-            </Grid>
-            <Grid item xs={12} display="flex" alignItems="center">
-                <Typography mr={1}>Dirección:</Typography>
-                <Typography 
-                  color="text.secondary"
-                  variant="body2"
-                >
-                  {resumeData.address.text}
-                </Typography>
-            </Grid>
-            <Grid item  xs={12}>
-                <Link to={resumeData.socials.linkedin.url} target="_blank">
-                <IconButton
-                    aria-label="LinkedIn"
-                    sx={{
-                    "&:hover": {
-                        color: "primary.main",
-                    },
-                    }}
-                >
-                    <resumeData.socials.linkedin.icon />
-                </IconButton>
-                </Link>
-                <Link to={resumeData.socials.github.url} target="_blank">
-                <IconButton
-                    aria-label="GitHub"
-                    sx={{
-                    "&:hover": {
-                        color: "primary.main",
-                    },
-                    }}
-                >
-                    <resumeData.socials.github.icon />
-                </IconButton>
-                </Link>
-            </Grid>
-          </Grid>
+        <Grid item xs={12} sm={9} lg={8}>
+          <TextField
+            name="email"
+            label="Email"
+            variant="outlined"
+            onChange={handleChange}
+            error={errors.email ? true : false}
+            helperText={errors.email}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={12} sm={9} lg={8}>
+          <TextField
+            name="message"
+            label="Mensaje"
+            variant="outlined"
+            onChange={handleChange}
+            error={errors.message ? true : false}
+            helperText={errors.message}
+            multiline
+            rows={10}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={12} sm={9} lg={8} display="flex" justifyContent="center">
+          <Button
+            type="submit"
+            variant="contained"
+            sx={{ textTransform: "none", borderRadius: "50px" }}
+          >
+            Enviar
+          </Button>
         </Grid>
       </Grid>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition="Flip"
+      />
     </Box>
   );
 };

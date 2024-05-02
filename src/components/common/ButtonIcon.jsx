@@ -8,6 +8,7 @@ const ButtonIcon = ({ text, icon, link }) => {
       sx={{
         borderRadius: "50px",
         textTransform: "none",
+        ml: 1
       }}
     >
       <Link href={link} underline="none" color="inherit" target="_blank">
