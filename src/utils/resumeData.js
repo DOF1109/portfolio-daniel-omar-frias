@@ -29,17 +29,17 @@ const resumeData = {
 
   experiences: [
     {
-        title: "Full Stack Developer - Dental Clinic",
-        date: "Oct. 2023 - Actualidad",
-        description:
-          "Programación de una aplicación web para una clínica dental con diferentes perfiles de usuario.",
-      },
+      title: "Full Stack Developer - Dental Clinic",
+      date: "Oct. 2023 - Actualidad",
+      description:
+        "Programación de una aplicación web para una clínica dental con diferentes perfiles de usuario.",
+    },
     {
-        title: "Android Developer - ScrAPPer",
-        date: "Nov. 2019 - Mar. 2020",
-        description:
-          "Programación de una aplicación Android para realizar el seguimiento de los equipos “scraper” por tuberías industriales.",
-      },
+      title: "Android Developer - ScrAPPer",
+      date: "Nov. 2019 - Mar. 2020",
+      description:
+        "Programación de una aplicación Android para realizar el seguimiento de los equipos “scraper” por tuberías industriales.",
+    },
     {
       title: "Instrumentista Industrial - TGN S.A.",
       date: "Ene. 2018 - Actualidad",
@@ -115,58 +115,72 @@ const resumeData = {
       ],
     },
     {
-        title: "Back-End",
-        description: [
-          "Java",
-          "Spring Boot",
-          "Hibernate",
-          "API Rest",
-          "MVC",
-          "JPA",
-          "Maven",
-          "Swagger",
-        ],
-      },
-      {
-        title: "Útiles",
-        description: [
-          "Inglés",
-          "Comunicación efectiva",
-          "Aprendizaje continuo",
-          "Resolución de problemas",
-          "Colaboración",
-          "Adaptabilidad",
-        ],
-      },
-      {
-        title: "Bases de datos",
-        description: [
-          "MySQL Workbench",
-          "SQL",
-        ],
-      },
-      {
-        title: "Infraestructura",
-        description: [
-          "AWS Cloud",
-          "Docker",
-        ],
-      },
-      {
-        title: "Testing",
-        description: [
-          "Postman",
-          "MockMVC",
-        ],
-      },
-      {
-        title: "Control y versionado",
-        description: [
-          "Git",
-          "GitHub",
-          "Scrum",
-        ],
-      },
+      title: "Back-End",
+      description: [
+        "Java",
+        "Spring Boot",
+        "Hibernate",
+        "API Rest",
+        "MVC",
+        "JPA",
+        "Maven",
+        "Swagger",
+      ],
+    },
+    {
+      title: "Útiles",
+      description: [
+        "Inglés",
+        "Comunicación efectiva",
+        "Aprendizaje continuo",
+        "Resolución de problemas",
+        "Colaboración",
+        "Adaptabilidad",
+      ],
+    },
+    {
+      title: "Bases de datos",
+      description: ["MySQL Workbench", "SQL"],
+    },
+    {
+      title: "Infraestructura",
+      description: ["AWS Cloud", "Docker"],
+    },
+    {
+      title: "Testing",
+      description: ["Postman", "MockMVC"],
+    },
+    {
+      title: "Control y versionado",
+      description: ["Git", "GitHub", "Scrum"],
+    },
+  ],
+
+  portfolio: [
+    {
+      title: "Dental Care",
+      description:
+        "Aplicación web de gestión de turnos para una clínica dental. Te permite administrar turnos, odontólogos, pacientes y otros aspectos relacionados con la gestión de turnos en una clínica dental.",
+      image: "",
+      links: [
+        {
+          link: "https://github.com/DOF1109/dental-clinic",
+          icon: GitHubIcon,
+        },
+      ],
+    },
+    {
+      title: "ScrAPPer",
+      description:
+        "Aplicación de seguimiento de 'scrapers' para una empresa de transporte de gas. Te permite rastrear el equipo contando los 'golpes' escuchados, estimar el tiempo de llegada del equipo a un punto específico y ver su velocidad de movimiento en la cañería.",
+      image: "",
+      links: [
+        {
+          link: "https://github.com/DOF1109/AppScraper",
+          icon: GitHubIcon,
+        },
+      ],
+    },
   ],
 };
 
