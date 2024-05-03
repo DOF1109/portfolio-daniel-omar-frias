@@ -159,6 +159,7 @@ const resumeData = {
   projects: [
     {
       title: "Dental Care",
+      caption: "App web para clínica dental.",
       description:
         "Aplicación web de gestión de turnos para una clínica dental. Te permite administrar turnos, odontólogos, pacientes y otros aspectos relacionados con la gestión de turnos en una clínica dental.",
       image: "",
@@ -171,6 +172,7 @@ const resumeData = {
     },
     {
       title: "ScrAPPer",
+      caption: "App mobile para seguimiento de 'scrapers'.",
       description:
         "Aplicación de seguimiento de 'scrapers' para una empresa de transporte de gas. Te permite rastrear el equipo contando los 'golpes' escuchados, estimar el tiempo de llegada del equipo a un punto específico y ver su velocidad de movimiento en la cañería.",
       image: "",
