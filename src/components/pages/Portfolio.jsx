@@ -46,8 +46,8 @@ const Portfolio = () => {
                     <CardMedia
                       component="img"
                       height="140"
-                      image="/static/images/cards/contemplative-reptile.jpg"
-                      alt="green iguana"
+                      image={project.image}
+                      alt={project.title}
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
@@ -75,6 +75,16 @@ const Portfolio = () => {
           <DialogTitle id="alert-dialog-title">
             {currentProject.title}
           </DialogTitle>
+          <Box
+            component="img"
+            src={currentProject.image}
+            alt={currentProject.title}
+            sx={{
+              objectFit: "cover",
+              maxWidth: { sx: 350, md: 250 },
+              width: 200,
+            }}
+          />
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               {currentProject.description}

@@ -1,5 +1,7 @@
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import DentalCareImg from "../assets/images/projects/dentalCare/Admin-Home.jpeg";
+import ScrapperImg from "../assets/images/projects/scrapper/Screenshot-ScrAPPer.jpg";
 
 const resumeData = {
   name: "Daniel Omar Frias",
@@ -162,7 +164,7 @@ const resumeData = {
       caption: "App web para clínica dental.",
       description:
         "Aplicación web de gestión de turnos para una clínica dental. Te permite administrar turnos, odontólogos, pacientes y otros aspectos relacionados con la gestión de turnos en una clínica dental.",
-      image: "",
+      image: DentalCareImg,
       links: [
         {
           socialRed: "GitHub",
@@ -176,7 +178,7 @@ const resumeData = {
       caption: "App mobile para seguimiento de 'scrapers'.",
       description:
         "Aplicación de seguimiento de 'scrapers' para una empresa de transporte de gas. Te permite rastrear el equipo contando los 'golpes' escuchados, estimar el tiempo de llegada del equipo a un punto específico y ver su velocidad de movimiento en la cañería.",
-      image: "",
+      image: ScrapperImg,
       links: [
         {
           socialRed: "GitHub",
