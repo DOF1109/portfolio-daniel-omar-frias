@@ -165,7 +165,8 @@ const resumeData = {
       image: "",
       links: [
         {
-          link: "https://github.com/DOF1109/dental-clinic",
+          socialRed: "GitHub",
+          url: "https://github.com/DOF1109/dental-clinic",
           icon: GitHubIcon,
         },
       ],
@@ -178,7 +179,8 @@ const resumeData = {
       image: "",
       links: [
         {
-          link: "https://github.com/DOF1109/AppScraper",
+          socialRed: "GitHub",
+          url: "https://github.com/DOF1109/AppScraper",
           icon: GitHubIcon,
         },
       ],
