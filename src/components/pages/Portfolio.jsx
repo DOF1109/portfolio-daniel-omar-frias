@@ -39,10 +39,18 @@ const Portfolio = () => {
             <Grid item key={project.title} xs={12} md={6}>
               <Grow in timeout={1000}>
                 <Card
-                  sx={{ maxWidth: 345 }}
+                  sx={{ maxWidth: 345, height: "100%" }}
                   onClick={() => handleOpenDialog(project)}
                 >
-                  <CardActionArea>
+                  <CardActionArea
+                    sx={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "flex-start",
+                      alignItems: "flex-start",
+                    }}
+                  >
                     <CardMedia
                       component="img"
                       height="140"
