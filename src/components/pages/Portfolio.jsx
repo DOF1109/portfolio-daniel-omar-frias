@@ -33,13 +33,13 @@ const Portfolio = () => {
   return (
     <Box component="section">
       <SectionTitle text="Portafolio" />
-      <Grid container spacing={2}>
+      <Grid container spacing={3} mt={1} justifyContent="space-evenly">
         {resumeData.projects.map((project) => {
           return (
-            <Grid item key={project.title} xs={12} md={6}>
+            <Grid item key={project.title} xs={12} sm={6} lg={4}>
               <Grow in timeout={1000}>
                 <Card
-                  sx={{ maxWidth: 345, height: "100%" }}
+                  sx={{ height: "100%" }}
                   onClick={() => handleOpenDialog(project)}
                 >
                   <CardActionArea
@@ -58,7 +58,7 @@ const Portfolio = () => {
                       alt={project.title}
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography gutterBottom variant="body1" component="div">
                         {project.title}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">

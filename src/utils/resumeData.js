@@ -2,6 +2,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import DentalCareImg from "../assets/images/projects/dentalCare/Admin-Home.jpeg";
 import ScrapperImg from "../assets/images/projects/scrapper/Screenshot-ScrAPPer.jpg";
+import SoundRentalsImg from "../assets/images/projects/soundRentals/SoundRentals-logo.jpg";
 
 const resumeData = {
   name: "Daniel Omar Frias",
@@ -159,6 +160,20 @@ const resumeData = {
   ],
 
   projects: [
+    {
+      title: "SoundRentals",
+      caption: "Trabajando en app web para reservas de DJs para enventos.",
+      description:
+        "Actualmente me encuentro trabajando en un equipo para el desarrollo de una aplicación web para realizar reservas de Djs para eventos. Además permitirá su administración y navegación como visitante dependiendo del tipo de usuario.",
+      image: SoundRentalsImg,
+      links: [
+        {
+          socialRed: "GitHub",
+          url: "https://github.com/DOF1109/sound-rentals",
+          icon: GitHubIcon,
+        },
+      ],
+    },
     {
       title: "Dental Care",
       caption: "App web para clínica dental.",
