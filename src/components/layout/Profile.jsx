@@ -1,15 +1,14 @@
 import { Box, Typography } from "@mui/material";
-import ProfilePhoto from "../../assets/images/daniel-omar-frias-foto.jpg";
+import ProfilePhoto from "../../assets/images/daniel-omar-frias-foto.webp";
 import CustomTimeline from "../common/CustomTimeline";
 import resumeData from "../../utils/resumeData";
 import ProfileTimelineItem from "../common/ProfileTimelineItem";
 import ButtonIcon from "../common/ButtonIcon";
 import PersonIcon from "@mui/icons-material/Person";
-import ContactPageIcon from '@mui/icons-material/ContactPage';
+import ContactPageIcon from "@mui/icons-material/ContactPage";
 import cvDanielOmarFrias from "../../assets/pdf/CV - Daniel Omar Frias.pdf";
 
 const Profile = () => {
-
   return (
     <Box
       component="aside"

@@ -1,8 +1,8 @@
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import DentalCareImg from "../assets/images/projects/dentalCare/Admin-Home.jpeg";
-import ScrapperImg from "../assets/images/projects/scrapper/Screenshot-ScrAPPer.jpg";
-import SoundRentalsImg from "../assets/images/projects/soundRentals/SoundRentals-logo.jpg";
+import * as soundRentalsImages from "../assets/images/projects/soundRentals/soundRentalsIndex";
+import * as dentalCareImages from "../assets/images/projects/dentalCare/dentalCareIndex";
+import * as scrapperImages from "../assets/images/projects/scrapper/scrapperIndex";
 
 const resumeData = {
   name: "Daniel Omar Frias",
@@ -165,7 +165,9 @@ const resumeData = {
       caption: "Trabajando en app web para reservas de DJs para enventos.",
       description:
         "Actualmente me encuentro trabajando en un equipo para el desarrollo de una aplicación web para realizar reservas de Djs para eventos. Además permitirá su administración y navegación como visitante dependiendo del tipo de usuario.",
-      image: SoundRentalsImg,
+      principalImage: soundRentalsImages.Logo,
+      arrayImages: Object.values(soundRentalsImages), // Esto crea un array con las imágenes
+
       links: [
         {
           socialRed: "GitHub",
@@ -179,7 +181,9 @@ const resumeData = {
       caption: "App web para clínica dental.",
       description:
         "Aplicación web de gestión de turnos para una clínica dental. Te permite administrar turnos, odontólogos, pacientes y otros aspectos relacionados con la gestión de turnos en una clínica dental.",
-      image: DentalCareImg,
+      principalImage: dentalCareImages.Home,
+      arrayImages: Object.values(dentalCareImages), // Esto crea un array con las imágenes
+
       links: [
         {
           socialRed: "GitHub",
@@ -193,7 +197,8 @@ const resumeData = {
       caption: "App mobile para seguimiento de 'scrapers'.",
       description:
         "Aplicación de seguimiento de 'scrapers' para una empresa de transporte de gas. Te permite rastrear el equipo contando los 'golpes' escuchados, estimar el tiempo de llegada del equipo a un punto específico y ver su velocidad de movimiento en la cañería.",
-      image: ScrapperImg,
+      principalImage: scrapperImages.Logo,
+      arrayImages: Object.values(scrapperImages), // Esto crea un array con las imágenes
       links: [
         {
           socialRed: "GitHub",

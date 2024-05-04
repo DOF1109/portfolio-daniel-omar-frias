@@ -54,7 +54,7 @@ const Portfolio = () => {
                     <CardMedia
                       component="img"
                       height="140"
-                      image={project.image}
+                      image={project.principalImage}
                       alt={project.title}
                     />
                     <CardContent>
@@ -86,7 +86,7 @@ const Portfolio = () => {
           </DialogTitle>
           <Box
             component="img"
-            src={currentProject.image}
+            src={currentProject.principalImage}
             alt={currentProject.title}
             sx={{
               objectFit: "cover",
