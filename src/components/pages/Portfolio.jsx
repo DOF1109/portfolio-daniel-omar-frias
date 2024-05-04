@@ -79,6 +79,7 @@ const Portfolio = () => {
           onClose={handleCloseDialog}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          maxWidth="sm"
         >
           <DialogTitle id="alert-dialog-title">
             {currentProject.title}
@@ -98,7 +99,7 @@ const Portfolio = () => {
               {currentProject.description}
             </DialogContentText>
           </DialogContent>
-          <DialogActions>
+          <DialogActions sx={{ justifyContent: "center" }}>
             {currentProject.links.map((link) => {
               return (
                 <Link key={link.socialRed} to={link.url} target="_blank">
