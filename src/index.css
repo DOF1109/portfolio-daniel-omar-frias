@@ -26,54 +26,35 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 2px solid rgb(1, 235, 252);
+  border: 2px solid rgba(49,208,190, 0.8);
+  /* border: 2px solid rgba(1, 235, 252, 0.8); */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-shadow: 0px 0px 30px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252),
-    0px 0px 5px rgb(255, 255, 255);
-  animation: flicker 5s ease infinite;
+  box-shadow: 0px 0px 30px rgba(49,208,190, 0.8),
+    inset 0px 0px 10px rgba(49,208,190, 0.8),
+    0px 0px 5px rgba(255, 255, 255, 0.8);
+  /* box-shadow: 0px 0px 30px rgba(1, 235, 252, 0.8),
+    inset 0px 0px 10px rgba(1, 235, 252, 0.8),
+    0px 0px 5px rgba(255, 255, 255, 0.8); */
+  animation: flicker 8s ease-in-out infinite;
 }
 
 @keyframes flicker {
-  0% {
-    border: 2px solid rgb(1, 235, 252);
-    box-shadow: 0px 0px 30px rgb(1, 235, 252),
-      inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+    0%, 80%, 82%, 84%, 88%, 91%, 97%, 100% {
+    border: 2px solid rgba(49,208,190, 0.8);
+    /* border: 2px solid rgba(1, 235, 252, 0.8); */
+    box-shadow: 0px 0px 30px rgba(49,208,190, 0.8),
+      inset 0px 0px 10px rgba(49,208,190, 0.8),
+      0px 0px 5px rgba(255, 255, 255, 0.8);
+    /* box-shadow: 0px 0px 30px rgba(1, 235, 252, 0.8),
+      inset 0px 0px 10px rgba(1, 235, 252, 0.8),
+      0px 0px 5px rgba(255, 255, 255, 0.8); */
   }
 
-  3% {
+  81%, 83%, 90%, 92% {
     border: none;
     box-shadow: none;
-  }
-
-  4% {
-    border: 2px solid rgb(1, 235, 252);
-    box-shadow: 0px 0px 30px rgb(1, 235, 252),
-      inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
-  }
-
-  15% {
-    border: 2px solid rgb(1, 235, 252);
-    box-shadow: 0px 0px 30px rgb(1, 235, 252),
-      inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
-  }
-
-  20% {
-    border: none;
-    box-shadow: none;
-  }
-
-  25% {
-    border: 2px solid rgb(1, 235, 252);
-    box-shadow: 0px 0px 30px rgb(1, 235, 252),
-      inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
-  }
-
-  100% {
-    border: 2px solid rgb(1, 235, 252);
-    box-shadow: 0px 0px 30px rgb(1, 235, 252),
-      inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
   }
 }

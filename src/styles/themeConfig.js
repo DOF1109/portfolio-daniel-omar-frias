@@ -4,7 +4,7 @@ const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#31d0be",
+      main: "#31d0be", // rgb(49,208,190)
     },
     secondary: {
       main: "#327ed1",
