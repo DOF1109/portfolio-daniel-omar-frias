@@ -26,16 +26,15 @@ const Profile = () => {
         </Typography>
       </Box>
 
-      <Box mt={4} display="flex" justifyContent="center">
+      <Box mt={4} className="neon-container">
         <Box
           component="img"
           src={ProfilePhoto}
           alt={resumeData.name + "'s photo"}
           sx={{
-            border: 3,
-            borderColor: "primary.main",
+            // border: 3,
+            // borderColor: "primary.main",
             borderRadius: "50%",
-            maxWidth: { xs: 350, md: 250 },
             width: 200,
           }}
         />
