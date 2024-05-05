@@ -91,8 +91,6 @@ const Portfolio = () => {
             sx={{
               objectFit: "cover",
               maxHeight: "40vh",
-              //   maxWidth: { sx: 350, md: 250 },
-              //   width: 200,
             }}
           />
           <DialogContent>
