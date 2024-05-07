@@ -18,10 +18,12 @@ import SectionTitle from "../common/SectionTitle";
 import resumeData from "../../utils/resumeData";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ImagesCarrousel from "../common/ImagesCarrousel";
 
 const Portfolio = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [currentProject, setCurrentProject] = useState(null);
+  const [openCarrousel, setOpenCarrousel] = useState(false);
 
   const handleOpenDialog = (project) => {
     setCurrentProject(project);
@@ -29,6 +31,14 @@ const Portfolio = () => {
   };
 
   const handleCloseDialog = () => setOpenDialog(false);
+
+  const handleOpenCarrousel = () => {
+    setOpenCarrousel(true);
+  };
+
+  const handleCloseCarrousel = () => {
+    setOpenCarrousel(false);
+  };
 
   return (
     <Box component="section">
@@ -92,6 +102,7 @@ const Portfolio = () => {
               objectFit: "cover",
               maxHeight: "40vh",
             }}
+            onClick={handleOpenCarrousel}
           />
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
@@ -117,6 +128,14 @@ const Portfolio = () => {
             })}
           </DialogActions>
         </Dialog>
+      )}
+      {openCarrousel && (
+        <ImagesCarrousel
+          openCarrousel={openCarrousel}
+          onClose={handleCloseCarrousel}
+          title={currentProject.title}
+          images={currentProject.arrayImages}
+        />
       )}
     </Box>
   );
