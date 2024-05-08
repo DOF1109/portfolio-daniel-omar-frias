@@ -8,10 +8,16 @@ import {
   Typography,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import EmblaCarousel from "./EmblaCarousel/EmblaCarousel";
+import "../../styles/embla.css";
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
+
+const OPTIONS = { loop: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const ImagesCarrousel = ({ openCarrousel, onClose, title, images }) => {
   return (
@@ -36,7 +42,7 @@ const ImagesCarrousel = ({ openCarrousel, onClose, title, images }) => {
           </Typography>
         </Toolbar>
       </AppBar>
-      {/* Add slider */}
+      <EmblaCarousel slides={images} options={OPTIONS} />
     </Dialog>
   );
 };
