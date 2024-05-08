@@ -29,6 +29,13 @@
     justify-content: center;
     height: var(--slide-height);
   }
+  .embla__slide__img {
+    border-radius: 1.8rem;
+    display: block;
+    height: var(--slide-height);
+    width: 100%;
+    object-fit: cover;
+  }
   .embla__controls {
     display: grid;
     grid-template-columns: auto 1fr;
