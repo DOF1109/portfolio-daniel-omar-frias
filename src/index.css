@@ -27,7 +27,6 @@
   height: 200px;
   border-radius: 50%;
   border: 2px solid rgba(49,208,190, 0.8);
-  /* border: 2px solid rgba(1, 235, 252, 0.8); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,22 +34,15 @@
   box-shadow: 0px 0px 30px rgba(49,208,190, 0.8),
     inset 0px 0px 10px rgba(49,208,190, 0.8),
     0px 0px 5px rgba(255, 255, 255, 0.8);
-  /* box-shadow: 0px 0px 30px rgba(1, 235, 252, 0.8),
-    inset 0px 0px 10px rgba(1, 235, 252, 0.8),
-    0px 0px 5px rgba(255, 255, 255, 0.8); */
   animation: flicker 8s ease-in-out infinite;
 }
 
 @keyframes flicker {
     0%, 80%, 82%, 84%, 88%, 91%, 97%, 100% {
     border: 2px solid rgba(49,208,190, 0.8);
-    /* border: 2px solid rgba(1, 235, 252, 0.8); */
     box-shadow: 0px 0px 30px rgba(49,208,190, 0.8),
       inset 0px 0px 10px rgba(49,208,190, 0.8),
       0px 0px 5px rgba(255, 255, 255, 0.8);
-    /* box-shadow: 0px 0px 30px rgba(1, 235, 252, 0.8),
-      inset 0px 0px 10px rgba(1, 235, 252, 0.8),
-      0px 0px 5px rgba(255, 255, 255, 0.8); */
   }
 
   81%, 83%, 90%, 92% {
@@ -60,22 +52,25 @@
 }
 
 .btn-see-more {
-  border-radius: 8px;
+  position: absolute;
+  padding: .75rem 1.75rem;
+  border-radius: 50px;
+  font-size: 1rem;
   color: #ffffff80;
   text-shadow: none;  
   background: transparent;
   cursor: pointer;
   box-shadow: transparent;
-  border: 1px solid #ffffff80;
+  border: 2px solid #ffffff80;
   transition: 0.5s ease;
-  user-select: none;
+  /* user-select: none; */
 }
 
 .btn-see-more:hover {
   color: #ffffff;
   background: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  border: 2px solid var(--primary-color);
+  text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
   box-shadow: 0 0 5px var(--primary-color), 0 0 20px var(--primary-color), 0 0 50px var(--primary-color),
     0 0 100px var(--primary-color);
 } 

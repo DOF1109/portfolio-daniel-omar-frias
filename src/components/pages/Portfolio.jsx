@@ -105,9 +105,8 @@ const Portfolio = () => {
                 width: "100%",
                 height: "100%"
               }}
-              onClick={handleOpenCarrousel}
             />
-            <Button className="btn-see-more" sx={{position: "absolute"}}>Ver más</Button>
+            <button className="btn-see-more" onClick={handleOpenCarrousel}>Ver más</button>
           </Box>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
