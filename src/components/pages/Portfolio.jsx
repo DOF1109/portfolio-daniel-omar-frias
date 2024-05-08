@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Card,
   CardActionArea,
   CardContent,
@@ -94,16 +95,20 @@ const Portfolio = () => {
           <DialogTitle id="alert-dialog-title">
             {currentProject.title}
           </DialogTitle>
-          <Box
-            component="img"
-            src={currentProject.principalImage}
-            alt={currentProject.title}
-            sx={{
-              objectFit: "cover",
-              maxHeight: "40vh",
-            }}
-            onClick={handleOpenCarrousel}
-          />
+          <Box display="flex" alignItems="center" justifyContent="center" overflow="hidden" position="relative">
+            <Box
+              component="img"
+              src={currentProject.principalImage}
+              alt={currentProject.title}
+              sx={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%"
+              }}
+              onClick={handleOpenCarrousel}
+            />
+            <Button className="btn-see-more" sx={{position: "absolute"}}>Ver más</Button>
+          </Box>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               {currentProject.description}

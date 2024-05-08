@@ -58,3 +58,24 @@
     box-shadow: none;
   }
 }
+
+.btn-see-more {
+  border-radius: 8px;
+  color: #ffffff80;
+  text-shadow: none;  
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.btn-see-more:hover {
+  color: #ffffff;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px var(--primary-color), 0 0 20px var(--primary-color), 0 0 50px var(--primary-color),
+    0 0 100px var(--primary-color);
+} 
