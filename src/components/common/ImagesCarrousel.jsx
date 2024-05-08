@@ -1,6 +1,7 @@
 import { forwardRef, useRef, useEffect } from "react";
 import {
   AppBar,
+  Box,
   Dialog,
   IconButton,
   Slide,
@@ -58,13 +59,28 @@ const ImagesCarrousel = ({ openCarrousel, onClose, title, images }) => {
       </AppBar>
       <swiper-container
         ref={swiperElRef}
-        slides-per-view="3"
+        slides-per-view="1"
+        space-between="10"
         navigation="true"
         pagination="true"
+        centered-slides="true"
       >
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
+        {images.map((image, index) => {
+          return (
+            <swiper-slide key={index}>
+              <Box 
+                component="img" 
+                src={image} 
+                sx={{
+                  maxWidth: "90vw", 
+                  maxHeight: "90vh", 
+                  objectFit: "contain",
+                  transition: "transform 0.5s ease-in-out"
+                }} 
+              />
+            </swiper-slide>
+          )
+        })}
       </swiper-container>
     </Dialog>
   );
