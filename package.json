@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.15.13",
     "@mui/lab": "^5.0.0-alpha.168",
     "@mui/material": "^5.15.13",
+    "embla-carousel-react": "^8.0.4",
     "formik": "^2.4.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
