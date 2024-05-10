@@ -92,17 +92,17 @@ const EmblaCarousel = (props) => {
       .on('scroll', tweenScale)
   }, [emblaApi, tweenScale])
 
-  useEffect(() => {
-    if (!emblaApi || isHovered) return;
-    const timer = setInterval(() => {
-      if (emblaApi.canScrollNext()) {
-        emblaApi.scrollNext();
-      } else {
-        emblaApi.scrollTo(0); // Vuelve al primer slide si ya no puede avanzar
-      }
-    }, 4000); // Cambia cada 4 segundos
-    return () => clearInterval(timer); // Limpia el intervalo cuando el componente se desmonta
-  }, [emblaApi, isHovered])
+  // useEffect(() => {
+  //   if (!emblaApi || isHovered) return;
+  //   const timer = setInterval(() => {
+  //     if (emblaApi.canScrollNext()) {
+  //       emblaApi.scrollNext();
+  //     } else {
+  //       emblaApi.scrollTo(0); // Vuelve al primer slide si ya no puede avanzar
+  //     }
+  //   }, 4000); // Cambia cada 4 segundos
+  //   return () => clearInterval(timer); // Limpia el intervalo cuando el componente se desmonta
+  // }, [emblaApi, isHovered])
 
   return (
     <div 
