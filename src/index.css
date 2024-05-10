@@ -3,6 +3,14 @@
 :root {
   --primary-color: #31d0be;
   --toastify-color-success: var(--primary-color);
+  --paper-color-rgb: rgb(29,37,55);
+  --text-color-rgb: rgb(240,253,250);
+
+  /* Embla */
+  --text-body: var(--text-color-rgb);
+  --text-high-contrast-rgb-value: 230, 230, 230;
+  --detail-medium-contrast: var(--paper-color-rgb);
+  --detail-high-contrast: rgb(101, 101, 101);
 }
 
 .clear-link {
