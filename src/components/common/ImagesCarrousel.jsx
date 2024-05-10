@@ -16,8 +16,6 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
 
 const OPTIONS = { loop: true }
-const SLIDE_COUNT = 5
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const ImagesCarrousel = ({ openCarrousel, onClose, title, images }) => {
   return (
