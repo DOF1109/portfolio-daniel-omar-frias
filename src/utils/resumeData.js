@@ -165,7 +165,7 @@ const resumeData = {
       caption: "Trabajando en app web para reservas de DJs para enventos.",
       description:
         "Actualmente me encuentro trabajando en un equipo para el desarrollo de una aplicación web para realizar reservas de Djs para eventos. Además permitirá su administración y navegación como visitante dependiendo del tipo de usuario.",
-      principalImage: soundRentalsImages.Logo,
+      principalImage: soundRentalsImages.SoundRentals_1,
       arrayImages: Object.values(soundRentalsImages), // Esto crea un array con las imágenes
 
       links: [
@@ -181,7 +181,7 @@ const resumeData = {
       caption: "App web para clínica dental.",
       description:
         "Aplicación web de gestión de turnos para una clínica dental. Te permite administrar turnos, odontólogos, pacientes y otros aspectos relacionados con la gestión de turnos en una clínica dental.",
-      principalImage: dentalCareImages.Home,
+      principalImage: dentalCareImages.DentalCare_1,
       arrayImages: Object.values(dentalCareImages), // Esto crea un array con las imágenes
 
       links: [
@@ -197,7 +197,7 @@ const resumeData = {
       caption: "App mobile para seguimiento de 'scrapers'.",
       description:
         "Aplicación de seguimiento de 'scrapers' para una empresa de transporte de gas. Te permite rastrear el equipo contando los 'golpes' escuchados, estimar el tiempo de llegada del equipo a un punto específico y ver su velocidad de movimiento en la cañería.",
-      principalImage: scrapperImages.Logo,
+      principalImage: scrapperImages.ScrAPPer_1,
       arrayImages: Object.values(scrapperImages), // Esto crea un array con las imágenes
       links: [
         {

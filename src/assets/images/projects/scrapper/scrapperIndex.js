@@ -1,5 +1,5 @@
-export { default as Apk } from "./Screenshot-ScrAPPer-apk.webp";
-export { default as Home } from "./Screenshot-ScrAPPer-Home.webp";
-export { default as Info } from "./Screenshot-ScrAPPer-Info.webp";
-export { default as VelocityTime } from "./Screenshot-ScrAPPer-Vel-Time.webp";
-export { default as Logo } from "./Screenshot-ScrAPPer.webp";
+export { default as ScrAPPer_1 } from "./ScrAPPer-1.webp";
+export { default as ScrAPPer_2 } from "./ScrAPPer-2.webp";
+export { default as ScrAPPer_3 } from "./ScrAPPer-3.webp";
+export { default as ScrAPPer_4 } from "./ScrAPPer-4.webp";
+export { default as ScrAPPer_5 } from "./ScrAPPer-5.webp";
