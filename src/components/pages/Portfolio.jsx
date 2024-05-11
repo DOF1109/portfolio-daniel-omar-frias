@@ -14,6 +14,7 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import SectionTitle from "../common/SectionTitle";
 import resumeData from "../../utils/resumeData";
 import { useState } from "react";
@@ -91,10 +92,28 @@ const Portfolio = () => {
           aria-describedby="alert-dialog-description"
           maxWidth="sm"
         >
+          <IconButton
+            aria-label="close"
+            onClick={handleCloseDialog}
+            sx={{
+              position: "absolute",
+              right: 12,
+              top: 12,
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
           <DialogTitle id="alert-dialog-title">
             {currentProject.title}
           </DialogTitle>
-          <Box display="flex" alignItems="center" justifyContent="center" overflow="hidden" position="relative">
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            overflow="hidden"
+            position="relative"
+          >
             <Box
               component="img"
               src={currentProject.principalImage}
@@ -102,10 +121,12 @@ const Portfolio = () => {
               sx={{
                 objectFit: "cover",
                 width: "100%",
-                height: "100%"
+                height: "100%",
               }}
             />
-            <button className="btn-see-more" onClick={handleOpenCarrousel}>Ver más</button>
+            <button className="btn-see-more" onClick={handleOpenCarrousel}>
+              Ver más
+            </button>
           </Box>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
