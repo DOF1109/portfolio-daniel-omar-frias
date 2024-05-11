@@ -99,7 +99,6 @@ const Portfolio = () => {
               position: "absolute",
               right: 12,
               top: 12,
-              color: (theme) => theme.palette.grey[500],
             }}
           >
             <CloseIcon />

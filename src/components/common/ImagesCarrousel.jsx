@@ -29,7 +29,6 @@ const ImagesCarrousel = ({ openCarrousel, onClose, title, images }) => {
         <Toolbar>
           <IconButton
             edge="start"
-            color="inherit"
             onClick={onClose}
             aria-label="close"
           >
