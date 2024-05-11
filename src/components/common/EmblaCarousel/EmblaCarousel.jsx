@@ -23,17 +23,17 @@ const EmblaCarousel = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
-  useEffect(() => {
-    if (!emblaApi || isHovered) return;
-    const timer = setInterval(() => {
-      if (emblaApi.canScrollNext()) {
-        emblaApi.scrollNext();
-      } else {
-        emblaApi.scrollTo(0); // Vuelve al primer slide si ya no puede avanzar
-      }
-    }, 4000); // Cambia cada 4 segundos
-    return () => clearInterval(timer); // Limpia el intervalo cuando el componente se desmonta
-  }, [emblaApi, isHovered]);
+  //   useEffect(() => {
+  //     if (!emblaApi || isHovered) return;
+  //     const timer = setInterval(() => {
+  //       if (emblaApi.canScrollNext()) {
+  //         emblaApi.scrollNext();
+  //       } else {
+  //         emblaApi.scrollTo(0); // Vuelve al primer slide si ya no puede avanzar
+  //       }
+  //     }, 4000); // Cambia cada 4 segundos
+  //     return () => clearInterval(timer); // Limpia el intervalo cuando el componente se desmonta
+  //   }, [emblaApi, isHovered]);
 
   return (
     <div
@@ -45,7 +45,6 @@ const EmblaCarousel = (props) => {
         <div className="embla__container">
           {slides.map((slide, index) => (
             <div className="embla__slide" key={index}>
-              {/* <div className="embla__slide__number">{index + 1}</div> */}
               <img className="embla__slide__img" src={slide} alt="Imagen" />
             </div>
           ))}

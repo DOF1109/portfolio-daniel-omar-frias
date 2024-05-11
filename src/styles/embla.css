@@ -1,11 +1,14 @@
 .embla {
-  max-width: 95vw;
+  height: 80vh;
   margin: auto;
-  --slide-height: 70vh;
+  width: 90vw;
+  max-width: 1100px;
+  --slide-height: 65vh;
   --slide-spacing: 1rem;
   --slide-size: 100%;
 }
 .embla__viewport {
+  height: 85%;
   overflow: hidden;
 }
 .embla__container {
@@ -20,12 +23,10 @@
   padding-left: var(--slide-spacing);
 }
 .embla__slide__img {
-  border-radius: 10px;
   display: block;
-  max-height: var(--slide-height);
-  max-width: 100%;
-  margin: auto;
+  height: var(--slide-height);
   object-fit: contain;
+  width: 100%;
 }
 .embla__controls {
   display: grid;
