@@ -32,8 +32,6 @@ const Profile = () => {
           src={ProfilePhoto}
           alt={resumeData.name + "'s photo"}
           sx={{
-            // border: 3,
-            // borderColor: "primary.main",
             borderRadius: "50%",
             width: 200,
           }}
