@@ -50,7 +50,7 @@ const Header = () => {
               <IconButton
                 aria-label="Inicio"
                 size="medium"
-                sx={{ backgroundColor: "primary.main" }}
+                sx={{ backgroundColor: "primary.main", color: "background.default" }}
               >
                 <HomeIcon />
               </IconButton>
