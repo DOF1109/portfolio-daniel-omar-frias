@@ -45,11 +45,11 @@ const Header = () => {
             justifyContent: "space-between",
           }}
         >
-          <Box>
+          <Box alignContent="center">
             <Link to="/">
               <IconButton
                 aria-label="Inicio"
-                size="large"
+                size="medium"
                 sx={{ backgroundColor: "primary.main" }}
               >
                 <HomeIcon />
