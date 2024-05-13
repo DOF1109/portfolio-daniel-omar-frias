@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -13,7 +13,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import resumeData from "../../utils/resumeData";
 import ButtonIcon from "../common/ButtonIcon";
 
-const Header = () => {
+const Header = React.forwardRef((props, ref) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const location = useLocation();
@@ -35,7 +35,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ borderRadius: 2 }}>
+    <AppBar position="static" sx={{ borderRadius: 2 }} ref={ref}>
       <Toolbar>
         {/* ------------------ XS ------------------ */}
         <Box
@@ -203,6 +203,6 @@ const Header = () => {
       </Toolbar>
     </AppBar>
   );
-};
+});
 
 export default Header;

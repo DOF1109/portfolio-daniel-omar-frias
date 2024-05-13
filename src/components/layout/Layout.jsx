@@ -2,11 +2,12 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Box, Container, Fab } from "@mui/material";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { useEffect, useState } from "react";
 
-const Layout = () => {
+const Layout = ({headerRef}) => {
   const [isVisible, setIsVisible] = useState(false);
+  
 
   const checkScroll = () => {
     if (!isVisible && window.scrollY > 400) {
@@ -23,7 +24,7 @@ const Layout = () => {
 
   return (
     <>
-      <Header />
+      <Header ref={headerRef} />
       <Box
         component="main"
         bgcolor="background.paper"
@@ -37,7 +38,7 @@ const Layout = () => {
       <Container fixed>
         {isVisible && (
           <Fab
-            size="medium"
+            size="small"
             color="primary"
             aria-label="Arriba"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -48,7 +49,7 @@ const Layout = () => {
                },
             }}
           >
-            <KeyboardArrowUpIcon />
+            <ExpandLessIcon />
           </Fab>
         )}
       </Container>

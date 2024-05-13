@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Fab, Typography } from "@mui/material";
 import ProfilePhoto from "../../assets/images/daniel-omar-frias-foto.webp";
 import CustomTimeline from "../common/CustomTimeline";
 import resumeData from "../../utils/resumeData";
@@ -7,8 +7,9 @@ import ButtonIcon from "../common/ButtonIcon";
 import PersonIcon from "@mui/icons-material/Person";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import cvDanielOmarFrias from "../../assets/pdf/CV - Daniel Omar Frias.pdf";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const Profile = () => {
+const Profile = ({headerRef}) => {
   return (
     <Box
       component="aside"
@@ -71,6 +72,18 @@ const Profile = () => {
           icon={<ContactPageIcon />}
           link={cvDanielOmarFrias}
         />
+        <Fab
+          size="small"
+          color="primary"
+          aria-label="Ver más"
+          sx={{
+            display: { xs: "flex", sm: "none"},
+            mt:3
+          }}
+          onClick={() => headerRef.current.scrollIntoView({ behavior: 'smooth' })}
+        >
+          <ExpandMoreIcon />
+        </Fab>
       </Box>
     </Box>
   );

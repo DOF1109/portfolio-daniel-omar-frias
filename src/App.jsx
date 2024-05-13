@@ -7,8 +7,11 @@ import Resume from "./components/pages/Resume";
 import Layout from "./components/layout/Layout";
 import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
+import { useRef } from "react";
 
 function App() {
+  const headerRef = useRef(null);
+
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
@@ -21,13 +24,13 @@ function App() {
           spacing={3}
         >
           <Grid item xs={12} sm={8} md={4} lg={3}>
-            <Profile />
+            <Profile headerRef={headerRef} />
           </Grid>
 
           <Grid item xs={12} sm={12} md={8} lg={9}>
             <BrowserRouter>
               <Routes>
-                <Route element={<Layout />}>
+                <Route element={<Layout headerRef={headerRef} />}>
                   <Route path="/" element={<About />} />
                   <Route path="/resume" element={<Resume />} />
                   <Route path="/portfolio" element={<Portfolio />} />
