@@ -20,6 +20,10 @@
   text-decoration: none;
 }
 
+.primary-text {
+  color: var(--primary-color);
+}
+
 .underline {
   background: var(--primary-color);
   height: 3px;

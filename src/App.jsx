@@ -8,6 +8,7 @@ import Layout from "./components/layout/Layout";
 import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
 import { useRef } from "react";
+import NotFound from "./components/pages/NotFound";
 
 function App() {
   const headerRef = useRef(null);
@@ -36,7 +37,7 @@ function App() {
                   <Route path="/portfolio" element={<Portfolio />} />
                   <Route path="/contact" element={<Contact />} />
                 </Route>
-                <Route path="*" element={<h1>404 Not Found</h1>} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
           </Grid>
