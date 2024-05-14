@@ -28,12 +28,18 @@ const resumeData = {
   },
 
   about:
-    "●    ¡Hola!, soy un Full Stack Web Developer con una sólida formación académica. Aplico metodologías ágiles, principios SOLID, ETC y DRY.\n\n●    Soy adaptable, colaborativo y centrado en objetivos. Mis habilidades blandas me permiten trabajar excelente en equipo. Creo en brindar soluciones a través de la tecnología.\n\n●    Busco aportar mi mentalidad abierta y dinamismo, creciendo tanto personal como profesionalmente para poder aportar un valor agregado a mi trabajo.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos una encuentro o una llamada.",
+    "●    ¡Hola!, soy un Full Stack Web Developer con una sólida formación académica y con proyectos desarrollados con las tecnologías que solicita el mercado. Aplico metodologías ágiles, principios SOLID, ETC y DRY.\n\n●    Soy adaptable, colaborativo y centrado en objetivos. Mis habilidades blandas me permiten trabajar excelente en equipo. Creo en brindar soluciones a través de la tecnología.\n\n●    Busco aportar mi mentalidad abierta y dinamismo, creciendo tanto personal como profesionalmente para poder aportar un valor agregado a mi trabajo.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
 
   experiences: [
     {
+      title: "Front End Developer - SoundRentals",
+      date: "May. 2024 - Actualidad",
+      description:
+        "Programación de una aplicación web para reservas de DJs para enventos.",
+    },
+    {
       title: "Full Stack Developer - Dental Clinic",
-      date: "Oct. 2023 - Actualidad",
+      date: "Oct. 2023 - Dic. 2023",
       description:
         "Programación de una aplicación web para una clínica dental con diferentes perfiles de usuario.",
     },
@@ -182,7 +188,7 @@ const resumeData = {
       description:
         "Aplicación web de gestión de turnos para una clínica dental. Te permite administrar turnos, odontólogos, pacientes y otros aspectos relacionados con la gestión de turnos en una clínica dental.",
       principalImage: dentalCareImages.DentalCare_1,
-      arrayImages: Object.values(dentalCareImages), // Esto crea un array con las imágenes
+      arrayImages: Object.values(dentalCareImages),
 
       links: [
         {
@@ -198,7 +204,7 @@ const resumeData = {
       description:
         "Aplicación de seguimiento de 'scrapers' para una empresa de transporte de gas. Te permite rastrear el equipo contando los 'golpes' escuchados, estimar el tiempo de llegada del equipo a un punto específico y ver su velocidad de movimiento en la cañería.",
       principalImage: scrapperImages.ScrAPPer_1,
-      arrayImages: Object.values(scrapperImages), // Esto crea un array con las imágenes
+      arrayImages: Object.values(scrapperImages),
       links: [
         {
           socialRed: "GitHub",
