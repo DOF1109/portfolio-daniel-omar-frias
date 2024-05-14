@@ -10,9 +10,12 @@ const Layout = ({headerRef}) => {
   
 
   const checkScroll = () => {
-    if (!isVisible && window.scrollY > 400) {
+    // Verifico si es desktop o no para mostrar Fab
+    const scrollLimit = window.innerWidth < 900 ? 1100 : 400
+
+    if (!isVisible && window.scrollY > scrollLimit) {
       setIsVisible(true);
-    } else if (isVisible && window.scrollY <= 400) {
+    } else if (isVisible && window.scrollY <= scrollLimit) {
       setIsVisible(false);
     }
   };
