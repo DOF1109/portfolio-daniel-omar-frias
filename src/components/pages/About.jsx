@@ -9,7 +9,10 @@ const About = () => {
     <>
       <Helmet>
         <title>Daniel Omar Frias - Sobre mí</title>
-        <meta name="description" content="Portafolio de Daniel Omar Frias, Full Stack Web Developer. Conoce mis habilidades, proyectos y las soluciones innovadoras que he creado." />
+        <meta 
+          name="description" 
+          content="Portafolio de Daniel Omar Frias, Full Stack Web Developer. Conoce mis habilidades, proyectos y las soluciones innovadoras que he creado." 
+        />
       </Helmet>
       <Box component="section" mb={5}>
         <SectionTitle text="Sobre mí" />

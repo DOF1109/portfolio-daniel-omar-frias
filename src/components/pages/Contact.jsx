@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { ToastContainer, Flip, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
+import { Helmet } from 'react-helmet';
 
 const Contact = () => {
   const { handleChange, handleSubmit, errors, values } = useFormik({
@@ -69,74 +70,83 @@ const Contact = () => {
   };
 
   return (
-    <Box component="section">
-      <SectionTitle text="Formulario de contacto" />
-      <Grid
-        container
-        spacing={3}
-        justifyContent="center"
-        component="form"
-        onSubmit={handleSubmit}
-      >
-        <Grid item xs={12} sm={9} lg={8} mt={3}>
-          <TextField
-            name="name"
-            label="Nombre"
-            variant="outlined"
-            onChange={handleChange}
-            error={errors.name ? true : false}
-            helperText={errors.name}
-            fullWidth
-          />
+    <>
+      <Helmet>
+        <title>Daniel Omar Frias - Contacto</title>
+        <meta 
+          name="description" 
+          content="Ponte en contacto con Daniel Omar Frias, Full Stack Web Developer. Si tienes alguna pregunta, sugerencia o propuesta, no dudes en enviarme un mensaje a través de este simple formulario." 
+        />
+      </Helmet>
+      <Box component="section">
+        <SectionTitle text="Formulario de contacto" />
+        <Grid
+          container
+          spacing={3}
+          justifyContent="center"
+          component="form"
+          onSubmit={handleSubmit}
+        >
+          <Grid item xs={12} sm={9} lg={8} mt={3}>
+            <TextField
+              name="name"
+              label="Nombre"
+              variant="outlined"
+              onChange={handleChange}
+              error={errors.name ? true : false}
+              helperText={errors.name}
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12} sm={9} lg={8}>
+            <TextField
+              name="email"
+              label="Email"
+              variant="outlined"
+              onChange={handleChange}
+              error={errors.email ? true : false}
+              helperText={errors.email}
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12} sm={9} lg={8}>
+            <TextField
+              name="message"
+              label="Mensaje"
+              variant="outlined"
+              onChange={handleChange}
+              error={errors.message ? true : false}
+              helperText={errors.message}
+              multiline
+              rows={10}
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12} sm={9} lg={8} display="flex" justifyContent="center">
+            <Button
+              type="submit"
+              variant="contained"
+              sx={{ textTransform: "none", borderRadius: "50px" }}
+            >
+              Enviar
+            </Button>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={9} lg={8}>
-          <TextField
-            name="email"
-            label="Email"
-            variant="outlined"
-            onChange={handleChange}
-            error={errors.email ? true : false}
-            helperText={errors.email}
-            fullWidth
-          />
-        </Grid>
-        <Grid item xs={12} sm={9} lg={8}>
-          <TextField
-            name="message"
-            label="Mensaje"
-            variant="outlined"
-            onChange={handleChange}
-            error={errors.message ? true : false}
-            helperText={errors.message}
-            multiline
-            rows={10}
-            fullWidth
-          />
-        </Grid>
-        <Grid item xs={12} sm={9} lg={8} display="flex" justifyContent="center">
-          <Button
-            type="submit"
-            variant="contained"
-            sx={{ textTransform: "none", borderRadius: "50px" }}
-          >
-            Enviar
-          </Button>
-        </Grid>
-      </Grid>
-      <ToastContainer
-        position="top-center"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-        transition="Flip"
-      />
-    </Box>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          transition="Flip"
+        />
+      </Box>
+    </>
   );
 };
 

@@ -1,8 +1,19 @@
 import { Box, Typography } from "@mui/material";
 import resumeData from "../../utils/resumeData";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+    navigate("/");
+  };
+
   return (
     <Box
       bgcolor="background.paper"
@@ -16,7 +27,11 @@ const Footer = () => {
     >
       <Typography variant="caption" color="text.secondary">
         Desarrollado por
-        <Link className="clear-link" to="/">
+        <Link 
+          className="clear-link" 
+          to="/"
+          onClick={handleClick}
+        >
           <Typography variant="caption" color="primary">
             {" "}
             {resumeData.name}

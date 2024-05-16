@@ -28,7 +28,7 @@ const resumeData = {
   },
 
   about:
-    "●    ¡Hola!, soy un Full Stack Web Developer con una sólida formación académica y con proyectos desarrollados con las tecnologías que solicita el mercado. Aplico metodologías ágiles, principios SOLID, ETC y DRY.\n\n●    Soy adaptable, colaborativo y centrado en objetivos. Mis habilidades blandas me permiten trabajar excelente en equipo. Creo en brindar soluciones a través de la tecnología.\n\n●    Busco aportar mi mentalidad abierta y dinamismo, creciendo tanto personal como profesionalmente para poder aportar un valor agregado a mi trabajo.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
+    "●    ¡Hola!, soy un Full Stack Web Developer con una sólida formación académica y con proyectos alineados con las tecnologías clave del sector. Aplico metodologías ágiles, principios SOLID, ETC y DRY.\n\n●    Soy adaptable, colaborativo y centrado en objetivos. Mis habilidades blandas me permiten trabajar excelente en equipo. Creo en brindar soluciones a través de la tecnología.\n\n●    Busco aportar mi mentalidad abierta y dinamismo, creciendo tanto personal como profesionalmente para poder aportar un valor agregado a mi trabajo.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
 
   experiences: [
     {
