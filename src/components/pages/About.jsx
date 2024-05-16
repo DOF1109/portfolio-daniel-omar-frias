@@ -36,7 +36,7 @@ const About = () => {
                 <List disablePadding>
                   {skill.description.map((element) => {
                     return (
-                      <ListItem key={element} disablePadding>
+                      <ListItem key={element} disablePadding sx={{my: 1}}>
                         <TimelineDot
                           variant="outlined"
                           color="primary"
