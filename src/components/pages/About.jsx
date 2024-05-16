@@ -2,10 +2,15 @@ import { Box, Grid, List, ListItem, Paper, Typography } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 import resumeData from "../../utils/resumeData";
 import { TimelineDot } from "@mui/lab";
+import { Helmet } from 'react-helmet';
 
 const About = () => {
   return (
     <>
+      <Helmet>
+        <title>Daniel Omar Frias - Sobre mí</title>
+        <meta name="description" content="Portafolio de Daniel Omar Frias, Full Stack Web Developer. Conoce mis habilidades, proyectos y las soluciones innovadoras que he creado." />
+      </Helmet>
       <Box component="section" mb={5}>
         <SectionTitle text="Sobre mí" />
         <Typography
