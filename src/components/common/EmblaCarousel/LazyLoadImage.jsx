@@ -22,7 +22,7 @@ const LazyLoadImage = (props) => {
           className="embla__slide__img embla__lazy-load__img"
           onLoad={setLoaded}
           src={inView ? imgSrc : PLACEHOLDER_SRC}
-          alt="Your alt text"
+          alt="Imágen del proyecto"
           data-src={imgSrc}
         />
       </div>
