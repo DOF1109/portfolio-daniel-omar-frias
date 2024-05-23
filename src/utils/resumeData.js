@@ -28,7 +28,7 @@ const resumeData = {
   },
 
   about:
-    "●    ¡Hola!, soy un Full Stack Web Developer con una sólida formación académica y con proyectos alineados con las tecnologías clave del sector. Aplico metodologías ágiles, principios SOLID, ETC y DRY.\n\n●    Soy adaptable, colaborativo y centrado en objetivos. Mis habilidades blandas me permiten trabajar excelente en equipo. Creo en brindar soluciones a través de la tecnología.\n\n●    Busco aportar mi mentalidad abierta y dinamismo, creciendo tanto personal como profesionalmente para poder aportar un valor agregado a mi trabajo.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
+    "●    ¡Hola!, soy un Full Stack Web Developer apasionado por la tecnología y brindar soluciones a través de la misma, estoy buscando desempeñarme como desarrollador web o móvil. Mi interés en estos campos va más allá de lo profesional, como lo demuestra la aplicación móvil innovadora que desarrollé proactivamente en mi puesto actual o el proyecto web en el que me encuentro trabajando.\n\n●    Mi reconocimiento como empleado destacado del año 2022 es un testimonio de mi integridad y habilidades para trabajar en equipo.\n\n●    Mi objetivo es aportar mi mentalidad abierta y dinamismo a empresas que me permitan crecer tanto personal como profesionalmente.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
 
   experiences: [
     {
@@ -140,11 +140,13 @@ const resumeData = {
       title: "Útiles",
       description: [
         "Inglés",
-        "Comunicación efectiva",
+        "Innovación",
+        "Integridad",
+        "Adaptación",
+        "Trabajo en equipo",
         "Aprendizaje continuo",
+        "Comunicación efectiva",
         "Resolución de problemas",
-        "Colaboración",
-        "Adaptabilidad",
       ],
     },
     {
