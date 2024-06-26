@@ -110,7 +110,7 @@ const resumeData = {
 
   skills: [
     {
-      title: "Front-End",
+      title: "Front End",
       description: [
         "React",
         "Material UI",
@@ -124,29 +124,31 @@ const resumeData = {
       ],
     },
     {
-      title: "Back-End",
+      title: "Back End",
       description: [
         "Java",
         "Spring Boot",
-        "Hibernate",
+        "Node.js",
+        "Express.js",
         "API Rest",
-        "MVC",
-        "JPA",
-        "Maven",
+        "Hibernate",
         "Swagger",
+        "Maven",
+        "MVC",
       ],
     },
     {
       title: "Útiles",
       description: [
         "Inglés",
-        "Innovación",
-        "Integridad",
-        "Adaptación",
-        "Trabajo en equipo",
-        "Aprendizaje continuo",
-        "Comunicación efectiva",
         "Resolución de problemas",
+        "Atención al detalle",
+        "Trabajo en equipo",
+        "Comunicación efectiva",
+        "Aprendizaje continuo",
+        "Innovación",
+        "Adaptación",
+        "Integridad",
       ],
     },
     {

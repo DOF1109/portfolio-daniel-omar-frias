@@ -1,3 +1,10 @@
 export { default as SoundRentals_1 } from "./SoundRentals-1.webp";
 export { default as SoundRentals_2 } from "./SoundRentals-2.webp";
 export { default as SoundRentals_3 } from "./SoundRentals-3.webp";
+export { default as SoundRentals_4 } from "./SoundRentals-4.webp";
+export { default as SoundRentals_5 } from "./SoundRentals-5.webp";
+export { default as SoundRentals_6 } from "./SoundRentals-6.webp";
+export { default as SoundRentals_7 } from "./SoundRentals-7.webp";
+export { default as SoundRentals_8 } from "./SoundRentals-8.webp";
+export { default as SoundRentals_9 } from "./SoundRentals-9.webp";
+export { default as SoundRentals_10 } from "./SoundRentals-10.webp";
