@@ -6,7 +6,7 @@ import * as scrapperImages from "../assets/images/projects/scrapper/scrapperInde
 
 const resumeData = {
   name: "Daniel Omar Frias",
-  profession: "Full Stack Web Developer",
+  profession: "Software Developer",
   job: "Instrumentista Industrial",
   email: "friasdaniel.1109@gmail.com",
   address: {
@@ -16,7 +16,7 @@ const resumeData = {
 
   socials: {
     linkedin: {
-      url: "https://www.linkedin.com/in/daniel-omar-frias/",
+      url: "https://www.linkedin.com/in/danielomarfrias/",
       text: "Daniel Omar Frias",
       icon: LinkedInIcon,
     },
@@ -28,14 +28,26 @@ const resumeData = {
   },
 
   about:
-    "●    ¡Hola!, soy un Full Stack Web Developer apasionado por la tecnología y brindar soluciones a través de la misma, estoy buscando desempeñarme como desarrollador web o móvil. Mi interés en estos campos va más allá de lo profesional, como lo demuestra la aplicación móvil innovadora que desarrollé proactivamente en mi puesto actual o el proyecto web en el que me encuentro trabajando.\n\n●    Mi reconocimiento como empleado destacado del año 2022 es un testimonio de mi integridad y habilidades para trabajar en equipo.\n\n●    Mi objetivo es aportar mi mentalidad abierta y dinamismo a empresas que me permitan crecer tanto personal como profesionalmente.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
+    "●    ¡Hola!, soy un Software Developer apasionado por la tecnología y brindar soluciones a través de la misma. Cuento con experiencia y formación académica. Empleo buenas prácticas, código limpio, patrones de diseño y arquitecturas.\n\n●    Busco trabajar como desarrollador web o móvil como actividad principal. Mi objetivo es aportar valor agregado a las empresas mientras avanzo personal y profesionalmente.\n\n●    Mi reconocimiento como empleado destacado del año 2022 es un testimonio de mi proactividad y capacidad de trabajo en equipo.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
 
   experiences: [
     {
+      title: "Full Stack Developer - E3 Digital Dev",
+      date: "Jul. 2024 - Actualidad",
+      description:
+        "Desarrollador Full Stack enfocado principalmente en el Front End. Trabajo de medio tiempo.",
+    },
+    {
       title: "Front End Developer - SoundRentals",
-      date: "May. 2024 - Actualidad",
+      date: "May. 2024 - Jun. 2024",
       description:
         "Programación de una aplicación web para reservas de DJs para enventos.",
+    },
+    {
+      title: "Full Stack Developer - Personal Portfolio",
+      date: "Ene. 2024 - Mar. 2024",
+      description:
+        "Desarrollo de un sitio web para mi portfolio personal.",
     },
     {
       title: "Full Stack Developer - Dental Clinic",
@@ -66,7 +78,7 @@ const resumeData = {
   education: [
     {
       title: "Professional Developer - Digital House",
-      date: "Oct. 2022 - Actualidad",
+      date: "Oct. 2022 - Jun. 2024",
       description:
         "Carrera de desarrollo web diseñada por Mercado Libre, Globant y Digital House, donde imparten conocimientos técnicos y soft skills.",
     },
@@ -115,25 +127,27 @@ const resumeData = {
         "React",
         "Material UI",
         "Responsive Web Design",
-        "APIs",
+        "RESTful APIs",
         "HTML",
         "CSS",
         "JavaScript",
-        "Bootstrap",
+        "JSON",
+        "NPM",
         "SASS",
       ],
     },
     {
       title: "Back End",
       description: [
-        "Java",
-        "Spring Boot",
         "Node.js",
         "Express.js",
-        "API Rest",
+        "WebSockets",
+        "Prisma",
+        "JWT",
+        "Java",
+        "Spring Boot",
         "Hibernate",
         "Swagger",
-        "Maven",
         "MVC",
       ],
     },
@@ -146,9 +160,10 @@ const resumeData = {
         "Trabajo en equipo",
         "Comunicación efectiva",
         "Aprendizaje continuo",
-        "Innovación",
         "Adaptación",
-        "Integridad",
+        "Dinamismo",
+        "Innovación",
+        "Pensamiento abstracto",
       ],
     },
     {
@@ -172,9 +187,9 @@ const resumeData = {
   projects: [
     {
       title: "SoundRentals",
-      caption: "Trabajando en app web para reservas de DJs para enventos.",
+      caption: "Aplicación web de reservas de DJs para enventos.",
       description:
-        "Actualmente me encuentro trabajando en un equipo para el desarrollo de una aplicación web para realizar reservas de Djs para eventos. Además permitirá su administración y navegación como visitante dependiendo del tipo de usuario.",
+        "Aplicación web para realizar reservas de Djs para eventos. Además permite su administración y navegación como visitante dependiendo del tipo de usuario.",
       principalImage: soundRentalsImages.SoundRentals_1,
       arrayImages: Object.values(soundRentalsImages), // Esto crea un array con las imágenes
 
