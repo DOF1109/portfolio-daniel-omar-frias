@@ -28,14 +28,14 @@ const resumeData = {
   },
 
   about:
-    "●    ¡Hola!, soy un Software Developer apasionado por la tecnología y brindar soluciones a través de la misma. Cuento con experiencia y formación académica. Empleo buenas prácticas, código limpio, patrones de diseño y arquitecturas.\n\n●    Busco trabajar como desarrollador web o móvil como actividad principal. Mi objetivo es aportar valor agregado a las empresas mientras avanzo personal y profesionalmente.\n\n●    Mi reconocimiento como empleado destacado del año 2022 es un testimonio de mi proactividad y capacidad de trabajo en equipo.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
+    "●    ¡Hola!, soy un Software Developer apasionado por la innovación y la tecnología. Con experiencia en desarrollo de software y formación académica. Comprometido a ofrecer soluciones de alta calidad.\n\n●    Busco contribuir a proyectos desafiantes en un entorno dinámico. Mi objetivo es aportar valor agregado a las empresas mientras avanzo personal y profesionalmente.\n\n●    Mi reconocimiento como empleado destacado del año 2022 es un testimonio de mi proactividad y capacidad de trabajo en equipo.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
 
   experiences: [
     {
-      title: "Full Stack Developer - E3 Digital Dev",
-      date: "Jul. 2024 - Actualidad",
+      title: "Front End Developer - E3 Digital Dev",
+      date: "Jul. 2024 - Oct. 2024",
       description:
-        "Desarrollador Full Stack enfocado principalmente en el Front End. Trabajo de medio tiempo.",
+        "Desarrollador Front End utilizando React como eje central y demás librerías de utilidad. Trabajo de medio tiempo.",
     },
     {
       title: "Front End Developer - SoundRentals",
@@ -125,15 +125,12 @@ const resumeData = {
       title: "Front End",
       description: [
         "React",
+        "Next.js",
         "Material UI",
-        "Responsive Web Design",
         "RESTful APIs",
         "HTML",
         "CSS",
         "JavaScript",
-        "JSON",
-        "NPM",
-        "SASS",
       ],
     },
     {
@@ -141,14 +138,11 @@ const resumeData = {
       description: [
         "Node.js",
         "Express.js",
-        "WebSockets",
         "Prisma",
-        "JWT",
         "Java",
         "Spring Boot",
         "Hibernate",
         "Swagger",
-        "MVC",
       ],
     },
     {
@@ -156,31 +150,24 @@ const resumeData = {
       description: [
         "Inglés",
         "Resolución de problemas",
-        "Atención al detalle",
         "Trabajo en equipo",
         "Comunicación efectiva",
         "Aprendizaje continuo",
         "Adaptación",
-        "Dinamismo",
         "Innovación",
-        "Pensamiento abstracto",
       ],
+    },
+    {
+      title: "Control y versionado",
+      description: ["Git", "GitHub", "Scrum"],
     },
     {
       title: "Bases de datos",
       description: ["MySQL Workbench", "SQL"],
     },
     {
-      title: "Infraestructura",
-      description: ["AWS Cloud", "Docker"],
-    },
-    {
-      title: "Testing",
-      description: ["Postman", "MockMVC"],
-    },
-    {
-      title: "Control y versionado",
-      description: ["Git", "GitHub", "Scrum"],
+      title: "Básicos",
+      description: ["Testing", "AWS Cloud", "Docker"],
     },
   ],
 
