@@ -3,6 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import * as soundRentalsImages from "../assets/images/projects/soundRentals/soundRentalsIndex";
 import * as dentalCareImages from "../assets/images/projects/dentalCare/dentalCareIndex";
 import * as scrapperImages from "../assets/images/projects/scrapper/scrapperIndex";
+import * as deliciasAndyImages from "../assets/images/projects/deliciasAndy/deliciasAndyIndex";
 
 const resumeData = {
   name: "Daniel Omar Frias",
@@ -28,9 +29,15 @@ const resumeData = {
   },
 
   about:
-    "●    ¡Hola!, soy un Software Developer apasionado por la innovación y la tecnología. Con experiencia en desarrollo de software y formación académica. Comprometido a ofrecer soluciones de alta calidad.\n\n●    Busco contribuir a proyectos desafiantes en un entorno dinámico. Mi objetivo es aportar valor agregado a las empresas mientras avanzo personal y profesionalmente.\n\n●    Mi reconocimiento como empleado destacado del año 2022 es un testimonio de mi proactividad y capacidad de trabajo en equipo.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, acordemos un encuentro, una llamada o a través de éste portfolio.",
+    "●    ¡Hola!, soy un Software Developer apasionado por la innovación y la tecnología. Con experiencia en desarrollo de software y formación académica. Comprometido a ofrecer soluciones de alta calidad.\n\n●    Busco contribuir a proyectos desafiantes en un entorno dinámico. Mi objetivo es aportar valor agregado a las empresas mientras avanzo personal y profesionalmente.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, una llamada o a través de éste portfolio.",
 
   experiences: [
+    {
+      title: "Full Stack Developer - Delicias Andy",
+      date: "Dic. 2024 - Mar. 2025",
+      description:
+        "Desarrollo de un sitio web para una pastelería.",
+    },
     {
       title: "Front End Developer - E3 Digital Dev",
       date: "Jul. 2024 - Oct. 2024",
@@ -136,13 +143,13 @@ const resumeData = {
     {
       title: "Back End",
       description: [
-        "Node.js",
-        "Express.js",
-        "Prisma",
         "Java",
         "Spring Boot",
         "Hibernate",
         "Swagger",
+        "Node.js",
+        "Express.js",
+        "Prisma",
       ],
     },
     {
@@ -173,12 +180,29 @@ const resumeData = {
 
   projects: [
     {
+      title: "Delicias Andy",
+      caption: "Sitio web para la repostería Delicias Andy.",
+      description:
+        "Sitio web de la repostería Delicias Andy. El sitio permite a los usuarios ver las diferntes categorías de productos, realizar pedidos, saber más acerca del negocio, contactarlos, poder llegar hasta el local y conocer sus redes sociales con los trabajos realizados.",
+      principalImage: deliciasAndyImages.DeliciasAndy_1,
+      arrayImages: Object.values(deliciasAndyImages), // Esto crea un array con las imágenes
+
+      links: [
+        {
+          socialRed: "GitHub",
+          url: "https://github.com/DOF1109/delicias-andy",
+          icon: GitHubIcon,
+        },
+      ],
+      liveUrl: "https://delicias-andy.web.app/",
+    },
+    {
       title: "SoundRentals",
       caption: "Aplicación web de reservas de DJs para enventos.",
       description:
         "Aplicación web para realizar reservas de Djs para eventos. Además permite su administración y navegación como visitante dependiendo del tipo de usuario.",
       principalImage: soundRentalsImages.SoundRentals_1,
-      arrayImages: Object.values(soundRentalsImages), // Esto crea un array con las imágenes
+      arrayImages: Object.values(soundRentalsImages),
 
       links: [
         {

@@ -20,7 +20,7 @@ import resumeData from "../../utils/resumeData";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ImagesCarrousel from "../common/ImagesCarrousel";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 const Portfolio = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -42,13 +42,17 @@ const Portfolio = () => {
     setOpenCarrousel(false);
   };
 
+  const redirectToWebsite = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       <Helmet>
         <title>Daniel Omar Frias - Portafolio</title>
-        <meta 
-          name="description" 
-          content="Explora el portafolio de proyectos de Daniel Omar Frias, Full Stack Web Developer. Descubre las soluciones que he desarrollado, cada una con su propio conjunto de desafíos y logros." 
+        <meta
+          name="description"
+          content="Explora el portafolio de proyectos de Daniel Omar Frias, Full Stack Web Developer. Descubre las soluciones que he desarrollado, cada una con su propio conjunto de desafíos y logros."
         />
       </Helmet>
       <Box component="section">
@@ -78,7 +82,11 @@ const Portfolio = () => {
                         alt={project.title}
                       />
                       <CardContent>
-                        <Typography gutterBottom variant="body1" component="div">
+                        <Typography
+                          gutterBottom
+                          variant="body1"
+                          component="div"
+                        >
                           {project.title}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
@@ -95,7 +103,7 @@ const Portfolio = () => {
 
         {currentProject && (
           <Dialog
-          open={openDialog}
+            open={openDialog}
             onClose={handleCloseDialog}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
@@ -132,7 +140,14 @@ const Portfolio = () => {
                   height: "100%",
                 }}
               />
-              <button className="btn-see-more" onClick={handleOpenCarrousel}>
+              <button
+                className="btn-see-more"
+                onClick={
+                  currentProject.liveUrl
+                    ? () => redirectToWebsite(currentProject.liveUrl)
+                    : handleOpenCarrousel
+                }
+              >
                 Ver más
               </button>
             </Box>
@@ -168,7 +183,7 @@ const Portfolio = () => {
             title={currentProject.title}
             images={currentProject.arrayImages}
           />
-          )}
+        )}
       </Box>
     </>
   );
