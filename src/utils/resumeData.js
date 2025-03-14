@@ -29,7 +29,7 @@ const resumeData = {
   },
 
   about:
-    "●    ¡Hola!, soy un Software Developer apasionado por la innovación y la tecnología. Con experiencia en desarrollo de software y formación académica. Comprometido a ofrecer soluciones de alta calidad.\n\n●    Busco contribuir a proyectos desafiantes en un entorno dinámico. Mi objetivo es aportar valor agregado a las empresas mientras avanzo personal y profesionalmente.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, una llamada o a través de éste portfolio.",
+    "●    ¡Hola!, soy un Software Developer apasionado por la innovación y la tecnología. Con formación académica y experiencia trabajando en equipos multifuncionales, participando en todas las etapas del ciclo de vida del desarrollo de software.\n\n●    Busco contribuir a proyectos desafiantes en un entorno dinámico. Mi objetivo es aportar valor con mi experiencia colaborando con clientes desde el diseño hasta la implementación de soluciones de alta calidad, mientras continúo creciendo profesionalmente.\n\n●    Si quieres saber más sobre mí, me puedes contactar por LinkedIn, enviarme un email, una llamada o a través de éste portfolio.",
 
   experiences: [
     {
@@ -39,10 +39,10 @@ const resumeData = {
         "Desarrollo de un sitio web para una pastelería.",
     },
     {
-      title: "Front End Developer - E3 Digital Dev",
+      title: "Full Stack Developer - E3 Digital Dev",
       date: "Jul. 2024 - Oct. 2024",
       description:
-        "Desarrollador Front End utilizando React como eje central y demás librerías de utilidad. Trabajo de medio tiempo.",
+        "Desarrollador Full Stack utilizando React y Java como eje central y demás librerías de utilidad. Trabajo de medio tiempo.",
     },
     {
       title: "Front End Developer - SoundRentals",
@@ -156,12 +156,12 @@ const resumeData = {
       title: "Útiles",
       description: [
         "Inglés",
-        "Resolución de problemas",
-        "Trabajo en equipo",
-        "Comunicación efectiva",
-        "Aprendizaje continuo",
         "Adaptación",
-        "Innovación",
+        "Proactividad",
+        "Trabajo en equipo",
+        "Aprendizaje continuo",
+        "Comunicación efectiva",
+        "Resolución de problemas",
       ],
     },
     {
